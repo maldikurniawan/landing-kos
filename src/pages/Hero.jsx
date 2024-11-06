@@ -18,8 +18,27 @@ const Hero = () => {
         <div className='text-xl'>
           Kos Putri Rumah Kembar
         </div>
-        <div>
-          <div className='mt-10 bg-green-100 text-green-600 p-2'>Sewa Sekarang</div>
+        <div className='mt-10 mb-4 inline-block bg-green-100 font-bold text-green-600 p-2 cursor-pointer rounded-lg'>
+          Sewa Sekarang
+        </div>
+        <div className='flex gap-4'>
+          <div className='inline-block bg-green-600 text-white p-6 rounded-lg'>
+            <div className='font-bold text-2xl'>
+              Mengapa Memilih Rumah Klaten Asri?
+            </div>
+            <div className='mt-10'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum numquam incidunt neque consequuntur earum ipsam obcaecati exercitationem, libero minima quas maxime dolorem, assumenda nemo. Quidem nisi ad nam nemo dolores.
+            </div>
+          </div>
+          <div className='bg-white text-black p-10 rounded-lg shadow-lg my-10'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem molestiae ad quo illum, itaque, eum odio unde ipsa, consequatur sed esse ratione! Ratione, officiis explicabo eum ea exercitationem aliquid.
+          </div>
+          <div className='bg-white text-black p-10 rounded-lg shadow-lg my-10'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem molestiae ad quo illum, itaque, eum odio unde ipsa, consequatur sed esse ratione! Ratione, officiis explicabo eum ea exercitationem aliquid.
+          </div>
+          <div className='bg-white text-black p-10 rounded-lg shadow-lg my-10'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem molestiae ad quo illum, itaque, eum odio unde ipsa, consequatur sed esse ratione! Ratione, officiis explicabo eum ea exercitationem aliquid.
+          </div>
         </div>
       </div>
     </div>

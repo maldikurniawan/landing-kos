@@ -12,7 +12,7 @@ import {
 
 export default function App() {
   return (
-    <div className="bg-green-200">
+    <div>
       <Header />
       <Hero />
       <About />
