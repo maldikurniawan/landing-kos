@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
-import { BsMoonStars } from 'react-icons/bs';
+import { BsHouseCheck } from 'react-icons/bs';
+import { GrMapLocation } from 'react-icons/gr';
+import { LiaBroomSolid } from 'react-icons/lia';
 
 const Hero = () => {
   const [hero] = useState([
     {
-      title: "Lorem",
-      description: "Lorem ipsum.",
-      icon: <BsMoonStars />,
+      title: "Tempat yang bersih",
+      description: "Membuat suasana hati lebih tenang dan nyaman.",
+      icon: <LiaBroomSolid />,
     },
     {
-      title: "Lorem",
-      description: "Lorem ipsum.",
-      icon: <BsMoonStars />,
+      title: "Fasilitas",
+      description: "Dengan fasilitas yang lenkap dapat membantu semua aktifitas kamu di kos-kosan.",
+      icon: <BsHouseCheck />,
     },
     {
-      title: "Lorem",
-      description: "Lorem ipsum.",
-      icon: <BsMoonStars />,
+      title: "Dekat kemana saja",
+      description: "Dengan lokasi yang strategis yang bisa menjangkau tujuan anda.",
+      icon: <GrMapLocation />,
     },
   ]);
 
@@ -45,7 +47,7 @@ const Hero = () => {
         </div>
 
         {/* Main Content Section */}
-        <div className='flex flex-col lg:flex-row gap-4 mt-6 w-full max-w-6xl px-4'>
+        <div className='flex flex-col lg:flex-row gap-6 mt-6 w-full max-w-6xl px-4'>
           {/* Left Panel */}
           <div className='bg-green-600 text-white p-6 rounded-lg flex-1'>
             <div className='font-bold text-xl sm:text-2xl'>
@@ -54,16 +56,16 @@ const Hero = () => {
             <div className='mt-4 sm:mt-10 text-sm sm:text-base'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum numquam incidunt neque consequuntur earum ipsam obcaecati exercitationem, libero minima quas maxime dolorem, assumenda nemo. Quidem nisi ad nam nemo dolores.
             </div>
-
           </div>
-          {/* Right Pannel */}
-          <div className='flex flex-col gap-4 mt-6'>
+
+          {/* Right Panel */}
+          <div className='flex-1 grid grid-cols-1 md:grid-cols-3 gap-4'>
             {hero.map((item, itemIdx) => (
-              <div key={itemIdx} className='flex items-center gap-2'>
-                <div className='text-lg'>{item.icon}</div>
+              <div key={itemIdx} className='bg-white p-4 rounded-lg items-center flex flex-col text-center gap-3 shadow-lg'>
+                <div className='text-green-600 text-xl text-center'>{item.icon}</div>
                 <div>
-                  <div className='font-bold'>{item.title}</div>
-                  <div className='text-sm'>{item.description}</div>
+                  <div className='font-bold text-green-800'>{item.title}</div>
+                  <div className='text-gray-700 text-sm'>{item.description}</div>
                 </div>
               </div>
             ))}

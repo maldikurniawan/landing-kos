@@ -25,20 +25,19 @@ const Pricing = () => {
   ]);
 
   return (
-    <div id='Pricing' className='h-fit bg-green-50 px-4 md:px-[300px] py-0 md:py-[5rem]'>
-      <div className='font-bold text-2xl md:text-4xl mb-2 md:mb-10 text-green-600 text-center'>
+    <div id='Pricing' className='h-fit bg-green-50 px-4 md:px-[80px] py-0 md:py-[5rem]'>
+      <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center'>
         Pricing
       </div>
       {/* Grid for content */}
-      <div className="p-[1rem] mt-10 mb-10 grid grid-cols-1 xl:grid-cols-2 gap-10">
+      <div className="p-4 mt-10 mb-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-10">
         {contentReadMore.map((item, index) => (
           <div
             key={index}
-            href={item.link}
             className="rounded-lg bg-white hover:scale-105 hover:shadow transition-all duration-300"
           >
             <div className="text-lg font-semibold mb-2 bg-green-900 text-white rounded-t-lg p-4 text-center">{item.title}</div>
-            <div className='text-green-900 font-bold px-4 my-6 text-xl'>Rp{item.price}</div>
+            <div className='text-green-900 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>
             <ol className="text-base mb-4 text-fade space-y-4 font-light px-4">
               {item.detail.map((detail, index) => (
                 <li key={index} className="list-disc list-inside pl-2">
@@ -55,7 +54,7 @@ const Pricing = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Pricing
+export default Pricing;

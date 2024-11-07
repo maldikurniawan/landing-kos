@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 
 const Gallery = () => {
   const allTabs = [
@@ -36,11 +36,11 @@ const Gallery = () => {
   }, [activeTabIndex]);
 
   return (
-    <div id='Gallery' className='h-screen bg-gray-50 px-4 md:px-[80px] py-0 md:py-[5rem]'>
-      <div className='font-bold text-2xl md:text-4xl mb-2 md:mb-10 text-green-600 text-center'>
+    <div id="Gallery" className="h-screen bg-gray-50 px-4 md:px-[80px] py-0 md:py-[5rem]">
+      <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center">
         Gallery
       </div>
-      <div className="relative mx-[420px] h-12 text-center justify-center rounded-3xl border flex border-black/40 bg-green-900 px-2 backdrop-blur-sm">
+      <div className="relative mx-auto max-w-full md:max-w-[600px] h-12 text-center justify-center rounded-3xl border flex border-black/40 bg-green-900 px-2 backdrop-blur-sm">
         <span
           className="absolute bottom-0 top-0 -z-10 flex overflow-hidden rounded-3xl py-2 transition-all duration-300"
           style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
@@ -54,8 +54,8 @@ const Gallery = () => {
             <button
               key={tab.id}
               ref={(el) => (tabsRef.current[index] = el)}
-              className={`${isActive ? '' : 'hover:text-neutral-300'
-                } my-auto cursor-pointer select-none rounded-full px-4 text-center font-light text-white`}
+              className={`${isActive ? 'font-semibold text-white' : 'hover:text-neutral-300'
+                } my-auto cursor-pointer select-none rounded-full px-4 text-center font-light text-white md:text-lg sm:text-md`}
               onClick={() => setActiveTabIndex(index)}
             >
               {tab.name}
@@ -64,7 +64,7 @@ const Gallery = () => {
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
