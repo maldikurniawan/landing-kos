@@ -25,32 +25,30 @@ const Contact = () => {
 
   return (
     <div id='Contact' className='relative xl:h-[800px] md:h-[1100px] bg-green-50 px-4 md:px-[80px] py-16 md:py-[5rem]'>
-      <div className='text-center font-bold text-2xl md:text-4xl mb-8 text-green-600'>
+      {/* This is the main content */}
+      <div className='relative z-10 font-bold text-2xl md:text-4xl mb-2 text-green-600 text-center'>
         Kontak Kami
+        <div className="absolute inset-0 h-screen -z-10 px-4 md:px-[80px] pb-[11rem] pt-24">
+          <MapContainer
+            center={[-5.349023596526887, 105.31452228437999]}
+            zoom={16}
+            scrollWheelZoom={false}
+            style={{ height: '100%', width: '100%' }}
+          >
+            <TileLayer
+              attribution=''
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[-5.349023596526887, 105.31452228437999]}>
+              <Popup>
+                Jl. Kelengkeng 10, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
-
-      {/* Map section */}
-      <div className="relative h-96 w-full mb-8">
-        <MapContainer
-          center={[-5.349023596526887, 105.31452228437999]}
-          zoom={16}
-          scrollWheelZoom={false}
-          style={{ height: '100%', width: '100%' }}
-        >
-          <TileLayer
-            attribution=''
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[-5.349023596526887, 105.31452228437999]}>
-            <Popup>
-              Jl. Kelengkeng 10, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365
-            </Popup>
-          </Marker>
-        </MapContainer>
-      </div>
-
       {/* Contact Information section */}
-      <div className='grid grid-cols-1 xl:grid-cols-3 gap-4 justify-center items-center'>
+      <div className='grid grid-cols-1 xl:grid-cols-3 gap-4 mt-[460px] max-[450px]:mt-[770px] justify-center items-center'>
         {contact.map((item, itemIdx) => (
           <div
             key={itemIdx}
