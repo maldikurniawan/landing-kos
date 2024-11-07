@@ -25,12 +25,12 @@ const Pricing = () => {
   ]);
 
   return (
-    <div id='Pricing' className='h-fit bg-green-50 px-4 md:px-[80px] py-0 md:py-[5rem]'>
+    <div id='Pricing' className='h-fit bg-green-50 px-4 md:px-[80px] py-16 md:py-[5rem]'>
       <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center'>
         Pricing
       </div>
       {/* Grid for content */}
-      <div className="p-4 mt-10 mb-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-10">
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-10">
         {contentReadMore.map((item, index) => (
           <div
             key={index}
@@ -46,7 +46,7 @@ const Pricing = () => {
               ))}
             </ol>
             <div className='bg-gray-200 p-4'>
-              <div className='bg-green-900 text-white text-center p-1 whitespace-nowrap rounded-lg'>
+              <div className='bg-green-900 text-white text-center p-1 whitespace-nowrap cursor-pointer rounded-lg'>
                 Sewa Sekarang
               </div>
             </div>

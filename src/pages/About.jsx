@@ -9,7 +9,7 @@ const About = () => {
   });
 
   return (
-    <div id='About' className='h-fit bg-green-50 grid grid-cols-1 md:grid-cols-12 px-4 md:px-[80px] py-0 md:py-[5rem] gap-6'>
+    <div id='About' className='h-fit bg-green-50 grid grid-cols-1 md:grid-cols-12 px-6 py-16 md:px-[80px] md:py-[5rem] gap-6'>
       <div className="col-span-full md:col-span-6">
         <img src={aboutUs.image} alt="about" className="w-full rounded-xl" />
       </div>
@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <p
           style={{ alignSelf: "stretch" }}
-          className="text-left text-base sm:text-lg md:text-[1.25rem] leading-7 md:leading-9"
+          className="text-left text-base sm:text-lg md:text-xl leading-7 md:leading-9"
         >
           {aboutUs.description}
         </p>

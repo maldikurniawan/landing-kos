@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsHouseCheck } from 'react-icons/bs';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { LiaBroomSolid } from 'react-icons/lia';
 
@@ -23,7 +24,7 @@ const Hero = () => {
   ]);
 
   return (
-    <div id='Hero' className='h-screen mt-[5rem] max-h-screen relative'>
+    <div id='Hero' className='xl:h-[720px] lg:h-[940px] md:h-[1140px] sm:h-[1100px] h-[1330px] mt-[5rem] relative bg-gray-100'>
       {/* Background Image Section */}
       <div className='relative'>
         <img
@@ -35,36 +36,43 @@ const Hero = () => {
       </div>
 
       {/* Overlay Content */}
-      <div className='absolute inset-0 top-[5rem] flex flex-col items-center text-center text-white px-4 md:px-[80px]'>
+      <div className='absolute inset-0 flex flex-col items-start text-white px-4 md:px-[80px]'>
         <div className='font-bold text-2xl sm:text-4xl mt-20 md:mt-32'>
           Welcome to Rumah Klaten Asri
         </div>
         <div className='text-lg sm:text-xl'>
           Kos Putri Dengan Desain Rumah Kembar
         </div>
-        <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 font-bold text-green-600 p-2 cursor-pointer rounded-lg'>
-          Sewa Sekarang
+        <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 font-bold text-green-600 p-2 rounded-lg'>
+          <div className='flex items-center gap-2 cursor-pointer'>
+            <div>
+              <FaArrowAltCircleRight />
+            </div>
+            <div>
+              Sewa Sekarang
+            </div>
+          </div>
         </div>
 
         {/* Main Content Section */}
-        <div className='flex flex-col lg:flex-row gap-6 mt-6 w-full max-w-6xl px-4'>
-          {/* Left Panel */}
-          <div className='bg-green-600 text-white p-6 rounded-lg flex-1'>
+        <div className='flex flex-col lg:flex-row gap-6 mt-6 w-full max-w-6xl'>
+          {/* Left Panel (1/4 width) */}
+          <div className='bg-green-600 text-white p-6 rounded-lg xl:w-1/4 lg:w-[360px] h-fit flex-shrink-0'>
             <div className='font-bold text-xl sm:text-2xl'>
               Mengapa Memilih Rumah Klaten Asri?
             </div>
-            <div className='mt-4 sm:mt-10 text-sm sm:text-base'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum numquam incidunt neque consequuntur earum ipsam obcaecati exercitationem, libero minima quas maxime dolorem, assumenda nemo. Quidem nisi ad nam nemo dolores.
+            <div className='mt-4 text-sm sm:text-base'>
+              Dengan lokasi yang strategis, tempat yang nyaman, serta fasilitas yang sangat lengkap, pengalaman Anda akan menjadi lebih menyenangkan. Tempat ini juga cocok dijadikan homestay untuk menginap hanya dalam hitungan hari.
             </div>
           </div>
 
-          {/* Right Panel */}
-          <div className='flex-1 grid grid-cols-1 md:grid-cols-3 gap-4'>
+          {/* Right Panel (3/4 width) */}
+          <div className='lg:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-4'>
             {hero.map((item, itemIdx) => (
-              <div key={itemIdx} className='bg-white p-4 rounded-lg items-center flex flex-col text-center gap-3 shadow-lg'>
-                <div className='text-green-600 text-xl text-center'>{item.icon}</div>
-                <div>
-                  <div className='font-bold text-green-800'>{item.title}</div>
+              <div key={itemIdx} className='bg-white p-10 xl:my-10 rounded-lg flex flex-col items-center text-center gap-3 shadow-lg'>
+                <div className='text-green-600 mb-4 text-4xl'>{item.icon}</div>
+                <div className='space-y-6'>
+                  <div className='font-bold text-green-800 text-xl'>{item.title}</div>
                   <div className='text-gray-700 text-sm'>{item.description}</div>
                 </div>
               </div>

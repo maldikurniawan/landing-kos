@@ -26,8 +26,8 @@ const Expectation = () => {
   ]);
 
   return (
-    <div id='Expectation' className='h-fit bg-emerald-50 px-4 md:px-[80px] py-8 md:py-[5rem]'>
-      <div className='font-bold text-2xl md:text-4xl mb-2 md:mb-10 text-green-600 text-center'>
+    <div id='Expectation' className='h-fit bg-emerald-50 px-4 md:px-[80px] py-16 md:py-[5rem]'>
+      <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center'>
         Harapan Kami
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
