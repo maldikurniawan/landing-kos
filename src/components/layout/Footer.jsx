@@ -1,4 +1,4 @@
-import { FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -21,6 +21,8 @@ const Footer = () => {
     };
 
     const sosialFooter = {
+        instagram: "/",
+        twitter: "/",
         youtube: "/",
     };
 
@@ -78,6 +80,22 @@ const Footer = () => {
                         className="hover:text-green-500"
                     >
                         <FaYoutube size={26} />
+                    </a>
+                    <a
+                        href={sosialFooter.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-green-500"
+                    >
+                        <FaInstagram size={26} />
+                    </a>
+                    <a
+                        href={sosialFooter.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-green-500"
+                    >
+                        <FaTwitter size={26} />
                     </a>
                 </div>
             </div>

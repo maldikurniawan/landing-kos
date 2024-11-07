@@ -13,6 +13,7 @@ const Header = () => {
 
     const menu = [
         { title: "Beranda", link: "Hero" },
+        { title: "About", link: "About" },
         { title: "Service", link: "Service" },
         { title: "Pricing", link: "Pricing" },
         { title: "FAQ", link: "FAQ" },
