@@ -16,7 +16,7 @@ const Hero = () => {
           Welcome to Rumah Klaten Asri
         </div>
         <div className='text-xl'>
-          Kos Putri Rumah Kembar
+          Kos Putri Dengan Desain Rumah Kembar
         </div>
         <div className='mt-10 mb-4 inline-block bg-green-100 font-bold text-green-600 p-2 cursor-pointer rounded-lg'>
           Sewa Sekarang

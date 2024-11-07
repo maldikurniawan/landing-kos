@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 const Pricing = () => {
   const [contentReadMore] = useState([
     {
-      title: "Rumah Klaten",
-      price: "1.000.000 / Bulan",
+      title: "Sewa Perbulan",
+      price: "1.500.000 / Bulan",
       detail: [
         "Sudah Termasuk Air & Listrik",
         "Spring Bed",
@@ -13,28 +13,8 @@ const Pricing = () => {
       ],
     },
     {
-      title: "Rumah Asri",
-      price: "1.000.000 / Bulan",
-      detail: [
-        "Sudah Termasuk Air & Listrik",
-        "Spring Bed",
-        "Lemari Pakaian",
-        "Kamar Mandi Dalam Kamar",
-      ],
-    },
-    {
-      title: "Rumah Klaten",
-      price: "1.000.000 / Bulan",
-      detail: [
-        "Sudah Termasuk Air & Listrik",
-        "Spring Bed",
-        "Lemari Pakaian",
-        "Kamar Mandi Dalam Kamar",
-      ],
-    },
-    {
-      title: "Rumah Asri",
-      price: "1.000.000 / Bulan",
+      title: "Sewa Pertahun",
+      price: "15.000.000 / Tahun",
       detail: [
         "Sudah Termasuk Air & Listrik",
         "Spring Bed",
@@ -45,12 +25,12 @@ const Pricing = () => {
   ]);
 
   return (
-    <div className='h-fit bg-green-50 px-4 md:px-[80px] py-0 md:py-[5rem]'>
+    <div className='h-fit bg-green-50 px-4 md:px-[300px] py-0 md:py-[5rem]'>
       <div className='font-bold text-2xl md:text-4xl mb-2 md:mb-10 text-green-600 text-center'>
         Pricing
       </div>
       {/* Grid for content */}
-      <div className="p-[1rem] mt-10 mb-10 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="p-[1rem] mt-10 mb-10 grid grid-cols-1 xl:grid-cols-2 gap-10">
         {contentReadMore.map((item, index) => (
           <div
             key={index}
