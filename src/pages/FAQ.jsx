@@ -12,40 +12,40 @@ const FAQ = () => {
 
   const faq = [
     {
-      question: "Apa itu ERPSKRIP ?",
+      question: "Apakah kosan putri ini memiliki jam malam?",
       answer:
-        "ERPSKRIP merupakan perangkat lunak yang didesign berbasis Enterprise Resources Planing berfokus pada otomasi dan optimasi pengelolaan perusahaan penyelenggara jasa internet dengan mengintegrasikan berbagai aspek operasional guna memudahkan proses integrasi pelanggan, inventori, manajemen proyek, pengelolaan keuangan, manajemen pengelolaan mitra jasa jual kembali dan lain - lain.",
+        "Ya, kosan putri ini memiliki jam malam. Penghuni diharapkan sudah berada di kosan maksimal pukul 22:00 untuk menjaga keamanan dan ketertiban.",
     },
     {
-      question: "Apa saja fitur ERPSKRIP ?",
+      question: "Apakah kosan putri ini menerima tamu laki-laki?",
       answer:
-        "Proses Penunjang Marketing, Optimasi dengan Zero Touch Network, Otomasi Manajemen Layanan, dan lain lain",
+        "Umumnya tamu laki-laki tidak diperbolehkan masuk ke area kamar. Namun, tamu laki-laki dapat berkunjung ke area umum atau ruang tamu dengan batasan waktu tertentu sesuai aturan kos.",
     },
     {
-      question: "Bagaimana Sistem Generate Invoice Suspend dan Isolir",
+      question: "Apakah ada fasilitas dapur bersama di kosan ini?",
       answer:
-        "Tagihan Pelanggan, Suspend ,dan Isolir Akan otomatis di buat sesuai kesepakatan dengan client menggunakan Whatsapp Blasting.",
+        "Ya, kosan ini menyediakan dapur bersama yang bisa digunakan oleh semua penghuni. Penghuni diharapkan menjaga kebersihan dan kerapihan dapur setelah menggunakannya.",
     },
     {
-      question: "Ada Berapa Support Payment di ERPSKRIP ?",
+      question: "Apakah kosan ini menyediakan fasilitas laundry?",
       answer:
-        "Ada 2 pilihan tipe pembayaran yakni Pacabayar (Bayar di Akhir) dan Prabayar (Bayar Di Awal). ",
+        "Beberapa kosan menyediakan fasilitas laundry, baik berupa mesin cuci atau layanan laundry berbayar. Harap pastikan fasilitas ini saat melakukan survei atau bertanya langsung ke pemilik kos.",
     },
     {
-      question: "Payment Gateway apa yang digunakan ERPSKRIP ?",
+      question: "Bagaimana sistem pembayaran di kosan ini?",
       answer:
-        "Kami menggunakan Payment Gateway yang kami miliki sendiri sehingga lebih mudah dan aman untuk melakukan transaksi tanpa ada kesulitan.",
+        "Pembayaran biasanya dilakukan bulanan, namun ada juga yang menawarkan pembayaran per tiga bulan atau per tahun dengan potongan harga. Harap tanyakan kepada pemilik kos mengenai detail pembayaran dan jatuh tempo.",
     },
     {
       question:
-        "Apakah ERPSKRIP memiliki Fitur WhatsApp menggunakan Nomor Client ?",
+        "Apakah kosan putri ini aman dari gangguan luar?",
       answer:
-        "Kami telah menyediakan Scan QR Code di halaman akun Anda untuk menggunakan nomor WhatsApp pribadi Anda.",
+        "Kosan putri ini dilengkapi dengan sistem keamanan seperti CCTV dan penjaga kos, serta akses pintu yang hanya bisa dibuka oleh penghuni untuk menjaga keamanan.",
     },
   ];
 
   return (
-    <div className='space-y-[3rem]'>
+    <div id='FAQ' className='space-y-[3rem]'>
       <div className="w-full bg-white overflow-hidden mb-[3rem]">
         <div
           style={{

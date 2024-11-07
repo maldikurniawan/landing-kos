@@ -12,9 +12,10 @@ const Header = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const menu = [
-        { title: "About", link: "About" },
+        { title: "Beranda", link: "Hero" },
         { title: "Service", link: "Service" },
         { title: "Pricing", link: "Pricing" },
+        { title: "FAQ", link: "FAQ" },
         { title: "Contact", link: "Contact" },
     ];
 

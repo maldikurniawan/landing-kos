@@ -9,7 +9,7 @@ const About = () => {
   });
 
   return (
-    <div className='h-fit bg-green-50 grid grid-cols-12 px-4 md:px-[80px] py-0 md:py-[5rem] gap-6'>
+    <div id='About' className='h-fit bg-green-50 grid grid-cols-12 px-4 md:px-[80px] py-0 md:py-[5rem] gap-6'>
       <div className="col-span-full md:col-span-6">
         <img src={aboutUs.image} alt="about" className="rounded-xl" />
       </div>

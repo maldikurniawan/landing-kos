@@ -23,13 +23,13 @@ const Contact = () => {
   ]);
 
   return (
-    <div className='relative h-[750px] bg-green-50 px-4 md:px-[80px] py-0 md:py-[5rem]'>
+    <div id='Contact' className='relative h-[750px] bg-green-50 px-4 md:px-[80px] py-0 md:py-[5rem]'>
       {/* This is the main content */}
       <div className='relative z-10 font-bold text-2xl md:text-4xl mb-2 text-green-600 text-center'>
         Kontak Kami
         <div className="absolute inset-0 h-screen -z-10 px-4 md:px-[80px] pb-[11rem] pt-24">
           <MapContainer
-            center={[-5.348895242564525, 105.31449368220905]}
+            center={[-5.349023596526887, 105.31452228437999]}
             zoom={16}
             scrollWheelZoom={false}
             style={{ height: '100%', width: '100%' }}
@@ -38,9 +38,9 @@ const Contact = () => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[-5.348895242564525, 105.31449368220905]}>
+            <Marker position={[-5.349023596526887, 105.31452228437999]}>
               <Popup>
-                M827+FM5, Jl. Kelengkeng 11, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365
+                Jl. Kelengkeng 10, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365
               </Popup>
             </Marker>
           </MapContainer>
