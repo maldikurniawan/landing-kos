@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id='Hero' className='xl:h-[720px] lg:h-[1060px] md:h-[1240px] sm:h-[1160px] h-[1330px] mt-[5rem] relative bg-gray-100 overflow-x-hidden'>
+    <div id='Hero' className='xl:h-[720px] lg:h-[1060px] md:h-[1240px] sm:h-[1160px] h-[1330px] mt-[5rem] relative bg-gray-100'>
       {/* Background Image Section */}
       <div className='relative' data-aos="fade-in">
         <img
@@ -73,7 +73,7 @@ const Hero = () => {
         {/* Main Content Section */}
         <div className='flex flex-col lg:flex-row gap-6 mt-6 w-full max-w-6xl'>
           {/* Left Panel (1/4 width) */}
-          <div className='bg-green-600 text-white p-6 rounded-lg xl:w-1/4 lg:w-[360px] h-fit flex-shrink-0' data-aos="fade-right">
+          <div className='bg-green-600 text-white p-6 rounded-lg xl:w-1/4 lg:w-[360px] h-fit flex-shrink-0' data-aos="fade-up">
             <div className='font-bold text-xl sm:text-2xl'>
               Mengapa Memilih Rumah Klaten Asri?
             </div>
