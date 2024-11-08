@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Pricing = () => {
   const [contentReadMore] = useState([
@@ -24,6 +26,12 @@ const Pricing = () => {
     },
   ]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div id='Pricing' className='h-fit bg-white dark:bg-white px-4 md:px-[80px] py-16 md:py-[5rem]'>
       <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center'>
@@ -35,6 +43,8 @@ const Pricing = () => {
           <div
             key={index}
             className="rounded-lg bg-white dark:bg-white hover:scale-105 hover:shadow shadow-md transition-all duration-300"
+            data-aos="fade-up" // AOS animation type
+            data-aos-delay={index * 100} // Stagger animation for each item
           >
             <div className="text-lg font-semibold mb-2 bg-green-600 text-white rounded-t-lg p-4 text-center">{item.title}</div>
             <div className='text-green-600 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>

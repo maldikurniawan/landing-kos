@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoChevronDown, IoChevronForward } from "react-icons/io5";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
+
   const toggleCollapse = (index) => {
-    // Jika item yang diklik adalah yang sedang aktif, tutup dengan mengeset null
-    // Jika tidak, buka item yang diklik
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -81,6 +87,8 @@ const FAQ = () => {
                 key={index}
                 className="bg-gray-100 rounded-lg p-4 cursor-pointer"
                 onClick={() => toggleCollapse(index)}
+                data-aos="fade-up" // AOS animation type
+                data-aos-delay={index * 100} // Stagger animation for each item
               >
                 {/* Title */}
                 <div className="font-medium flex justify-between">
@@ -111,4 +119,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default FAQ;

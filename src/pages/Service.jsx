@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BsFuelPump, BsMoonStars } from 'react-icons/bs';
 import { CiMedicalCase } from 'react-icons/ci';
 import { GiWaterPolo } from 'react-icons/gi';
@@ -39,6 +41,12 @@ const Service = () => {
     },
   ]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div id='Service' className='h-fit bg-gray-100 px-2 md:px-20 py-16'>
       <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-16 text-green-600 text-center'>
@@ -49,15 +57,19 @@ const Service = () => {
           <div
             key={itemIdx}
             className="bg-white dark:bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
+            data-aos="fade-up" // AOS animation type
+            data-aos-delay={itemIdx * 100} // Stagger animation for each item
           >
-            <div className='text-4xl text-white hover:text-green-600 hover:bg-white outline mb-4 bg-green-600 p-4 rounded-full absolute -mt-12'>{item.icon}</div>
+            <div className='text-4xl text-white hover:text-green-600 hover:bg-white outline mb-4 bg-green-600 p-4 rounded-full absolute -mt-12'>
+              {item.icon}
+            </div>
             <div className='font-semibold text-lg mb-2 mt-10'>{item.title}</div>
-            <div className='text-gray-600'>{item.description}</div>
+            <div className='text-gray-600 text-start p-4'>{item.description}</div>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Service;

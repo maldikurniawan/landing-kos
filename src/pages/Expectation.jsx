@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Expectation = () => {
   const [expectation] = useState([
@@ -24,6 +26,12 @@ const Expectation = () => {
     },
   ]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div id='Expectation' className='h-fit bg-white dark:bg-white px-4 md:px-20 py-16'>
       <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-8 text-green-600 text-center'>
@@ -34,11 +42,13 @@ const Expectation = () => {
           <div
             key={itemIdx}
             className="group bg-white dark:bg-white hover:bg-green-600 rounded-lg w-[300px] sm:w-[350px] md:w-full overflow-hidden shadow-md transition-colors duration-300"
+            data-aos="fade-up" // AOS animation type
+            data-aos-delay={itemIdx * 100} // Stagger animation for each item
           >
             <img src={item.image} alt={item.title} className='w-full h-48 object-cover' />
             <div className='p-6 flex flex-col items-center text-center transition-colors duration-300'>
               <div className='font-semibold text-green-600 text-lg mb-2 group-hover:text-white'>{item.title}</div>
-              <div className='text-gray-600 group-hover:text-white'>{item.description}</div>
+              <div className='text-gray-600 group-hover:text-white text-start'>{item.description}</div>
             </div>
           </div>
         ))}
