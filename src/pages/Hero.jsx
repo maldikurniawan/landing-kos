@@ -51,10 +51,10 @@ const Hero = () => {
 
       {/* Overlay Content */}
       <div className='absolute inset-0 flex flex-col items-start text-white px-4 md:px-[80px]'>
-        <div className='font-bold text-2xl sm:text-4xl mt-20 md:mt-32' data-aos="fade-up">
+        <div className='font-bold text-xl sm:text-4xl mt-20 md:mt-32' data-aos="fade-up">
           Welcome to Rumah Klaten Asri
         </div>
-        <div className='text-lg sm:text-xl' data-aos="fade-up" data-aos-delay="200">
+        <div className='text-md sm:text-xl' data-aos="fade-up" data-aos-delay="200">
           Kos Putri Dengan Desain Rumah Kembar
         </div>
         <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 hover:bg-green-600 hover:text-green-100 font-bold text-green-600 p-2 rounded-lg' data-aos="fade-up" data-aos-delay="400">
