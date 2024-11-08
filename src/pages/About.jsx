@@ -17,7 +17,7 @@ const About = () => {
   }, []);
 
   return (
-    <div id='About' className='h-fit bg-white dark:bg-white grid grid-cols-1 md:grid-cols-12 px-6 py-16 md:px-[80px] md:py-[5rem] gap-6'>
+    <div id='About' className='h-fit bg-white grid grid-cols-1 md:grid-cols-12 px-6 py-16 md:px-[80px] md:py-[5rem] gap-6'>
       <div className="col-span-full md:col-span-6" data-aos="fade-up">
         <img src={aboutUs.image} alt="about" className="w-full rounded-xl" />
       </div>

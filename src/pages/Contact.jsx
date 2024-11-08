@@ -59,7 +59,7 @@ const Contact = () => {
         {contact.map((item, itemIdx) => (
           <div
             key={itemIdx}
-            className="bg-white dark:bg-white shadow-lg rounded-md p-6 flex flex-col justify-center items-center text-center"
+            className="bg-white shadow-lg rounded-md p-6 flex flex-col justify-center items-center text-center"
             data-aos="fade-up"  // Add AOS animation here
           >
             <div className='text-4xl text-green-600 mb-2'>{item.icon}</div>

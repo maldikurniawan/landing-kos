@@ -68,8 +68,8 @@ const Header = () => {
             {/* Main Header */}
             <header
                 className={`px-4 md:px-[80px] h-20 flex items-center justify-between w-full fixed ${scrolled ? "top-0" : "top-8"} z-40 transition-all duration-300 py-0 ${scrolled
-                    ? "shadow bg-white dark:bg-white dark:bg-opacity-90 bg-opacity-90 hover:bg-opacity-100"
-                    : "shadow-none bg-white dark:bg-white"
+                    ? "shadow bg-white bg-opacity-90 hover:bg-opacity-100"
+                    : "shadow-none bg-white"
                     }`}
             >
                 <div className="font-bold text-xl flex md:text-3xl items-center gap-4 justify-center text-green-600">

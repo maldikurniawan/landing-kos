@@ -33,7 +33,7 @@ const Expectation = () => {
   }, []);
 
   return (
-    <div id='Expectation' className='h-fit bg-white dark:bg-white px-4 md:px-20 py-16'>
+    <div id='Expectation' className='h-fit bg-white px-4 md:px-20 py-16'>
       <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-8 text-green-600 text-center'>
         Expectation
       </div>
@@ -41,7 +41,7 @@ const Expectation = () => {
         {expectation.map((item, itemIdx) => (
           <div
             key={itemIdx}
-            className="group bg-white dark:bg-white hover:bg-green-600 rounded-lg w-[300px] sm:w-[350px] md:w-full overflow-hidden shadow-md transition-colors duration-300"
+            className="group bg-white hover:bg-green-600 rounded-lg w-[300px] sm:w-[350px] md:w-full overflow-hidden shadow-md transition-colors duration-300"
             data-aos="fade-up" // AOS animation type
             data-aos-delay={itemIdx * 100} // Stagger animation for each item
           >

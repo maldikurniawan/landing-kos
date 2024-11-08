@@ -56,7 +56,7 @@ const Service = () => {
         {service.map((item, itemIdx) => (
           <div
             key={itemIdx}
-            className="bg-white dark:bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
+            className="bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
             data-aos="fade-up" // AOS animation type
             data-aos-delay={itemIdx * 100} // Stagger animation for each item
           >

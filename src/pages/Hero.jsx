@@ -87,7 +87,7 @@ const Hero = () => {
             {hero.map((item, itemIdx) => (
               <div
                 key={itemIdx}
-                className='bg-white dark:bg-white p-10 xl:my-10 rounded-lg flex flex-col items-center text-center gap-3 shadow-lg'
+                className='bg-white p-10 xl:my-10 rounded-lg flex flex-col items-center text-center gap-3 shadow-lg'
                 data-aos={item.animation}
                 data-aos-delay={item.delay}
               >
