@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id='Hero' className='xl:h-[720px] lg:h-[1060px] md:h-[1240px] sm:h-[1160px] h-[1330px] mt-[5rem] relative bg-gray-100'>
+    <div id='Hero' className='xl:h-[720px] lg:h-[1060px] md:h-[1240px] sm:h-[1160px] h-[1330px] mt-[5rem] relative bg-gray-100 overflow-x-hidden'>
       {/* Background Image Section */}
       <div className='relative' data-aos="fade-in">
         <img
