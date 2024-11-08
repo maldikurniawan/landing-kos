@@ -36,7 +36,7 @@ const Gallery = () => {
   }, [activeTabIndex]);
 
   return (
-    <div id="Gallery" className="h-screen bg-gray-50 px-4 md:px-[80px] py-16 md:py-[5rem]">
+    <div id="Gallery" className="h-screen bg-gray-100 px-4 md:px-[80px] py-16 md:py-[5rem]">
       <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center">
         Gallery
       </div>

@@ -43,15 +43,17 @@ const Hero = () => {
         <div className='text-lg sm:text-xl'>
           Kos Putri Dengan Desain Rumah Kembar
         </div>
-        <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 font-bold text-green-600 p-2 rounded-lg'>
-          <div className='flex items-center gap-2 cursor-pointer'>
-            <div>
-              <FaArrowAltCircleRight />
+        <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 hover:bg-green-600 hover:text-green-100 font-bold text-green-600 p-2 rounded-lg'>
+          <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
+            <div className='flex items-center gap-2 cursor-pointer'>
+              <div>
+                <FaArrowAltCircleRight />
+              </div>
+              <div>
+                Sewa Sekarang
+              </div>
             </div>
-            <div>
-              Sewa Sekarang
-            </div>
-          </div>
+          </a>
         </div>
 
         {/* Main Content Section */}

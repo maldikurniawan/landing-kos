@@ -34,7 +34,7 @@ const Footer = () => {
     }, {});
 
     return (
-        <div className="px-[1rem] md:px-[80px] bg-purple-50 pt-4 md:pt-16 text-gray-600">
+        <div className="px-[1rem] md:px-[80px] bg-emerald-50 pt-4 md:pt-16 text-gray-600">
             <div className="mb-10 flex flex-wrap gap-x-8 gap-y-10">
                 {/* Footer Menu */}
                 {Object.entries(groupedMenu).map(([head, links], index) => (

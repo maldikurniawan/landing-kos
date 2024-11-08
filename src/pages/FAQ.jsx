@@ -14,7 +14,7 @@ const FAQ = () => {
     {
       question: "Apakah kosan putri ini memiliki jam malam?",
       answer:
-        "Ya, kosan putri ini memiliki jam malam. Penghuni diharapkan sudah berada di kosan maksimal pukul 22:00 untuk menjaga keamanan dan ketertiban.",
+        "Ya, kosan putri ini memiliki jam malam. Penghuni diharapkan sudah berada di kosan maksimal pukul 22:00 untuk menjaga keamanan dan ketertiban. Pastikan untuk menjaga volume suara, terutama ketika berbicara atau mendengarkan musik, agar tidak mengganggu tetangga yang sedang beristirahat.",
     },
     {
       question: "Apakah kosan putri ini menerima tamu laki-laki?",
@@ -22,25 +22,25 @@ const FAQ = () => {
         "Umumnya tamu laki-laki tidak diperbolehkan masuk ke area kamar. Namun, tamu laki-laki dapat berkunjung ke area umum atau ruang tamu dengan batasan waktu tertentu sesuai aturan kos.",
     },
     {
-      question: "Apakah ada fasilitas dapur bersama di kosan ini?",
+      question: "Bolehkah saya menggandakan kunci kamar atau gerbang kosan?",
       answer:
-        "Ya, kosan ini menyediakan dapur bersama yang bisa digunakan oleh semua penghuni. Penghuni diharapkan menjaga kebersihan dan kerapihan dapur setelah menggunakannya.",
+        "Tidak, penghuni tidak diperbolehkan menggandakan kunci kamar atau gerbang. Apabila kunci hilang, segera hubungi pengelola kos untuk penanganan lebih lanjut.",
     },
     {
-      question: "Apakah kosan ini menyediakan fasilitas laundry?",
+      question: "Apakah penghuni kos wajib memberikan informasi identitas diri?",
       answer:
-        "Beberapa kosan menyediakan fasilitas laundry, baik berupa mesin cuci atau layanan laundry berbayar. Harap pastikan fasilitas ini saat melakukan survei atau bertanya langsung ke pemilik kos.",
+        "Ya, setiap penghuni wajib memberikan informasi identitas diri sebagai syarat tinggal di kos. Hal ini penting untuk keamanan dan administrasi.",
     },
     {
-      question: "Bagaimana sistem pembayaran di kosan ini?",
+      question: "Apa yang harus saya lakukan jika hendak keluar area kos?",
       answer:
-        "Pembayaran biasanya dilakukan bulanan, namun ada juga yang menawarkan pembayaran per tiga bulan atau per tahun dengan potongan harga. Harap tanyakan kepada pemilik kos mengenai detail pembayaran dan jatuh tempo.",
+        "Pastikan pintu gerbang kos tertutup dan terkunci dengan baik saat Anda keluar. Ini untuk memastikan keamanan semua penghuni kos.",
     },
     {
       question:
-        "Apakah kosan putri ini aman dari gangguan luar?",
+        "Apa yang harus dilakukan jika ada fasilitas yang rusak atau ada masalah listrik?",
       answer:
-        "Kosan putri ini dilengkapi dengan sistem keamanan seperti CCTV dan penjaga kos, serta akses pintu yang hanya bisa dibuka oleh penghuni untuk menjaga keamanan.",
+        "Jika ada kerusakan fasilitas, seperti masalah listrik atau sumur bor, segera laporkan kepada pengelola kos. Pengelola akan segera menindaklanjuti permasalahan tersebut untuk kenyamanan penghuni.",
     },
   ];
 
@@ -60,7 +60,7 @@ const FAQ = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.2, // Set the opacity of the background image here
+              opacity: 0.2,
             }}
             className="absolute inset-0 z-0"
           ></div>

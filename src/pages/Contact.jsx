@@ -24,7 +24,7 @@ const Contact = () => {
   ]);
 
   return (
-    <div id='Contact' className='relative xl:h-[800px] md:h-[1100px] bg-green-50 px-4 md:px-[80px] py-16 md:py-[5rem]'>
+    <div id='Contact' className='relative xl:h-[800px] md:h-[1100px] bg-gray-100 px-4 md:px-[80px] py-16 md:py-[5rem]'>
       {/* This is the main content */}
       <div className='relative z-10 font-bold text-2xl md:text-4xl mb-2 text-green-600 text-center'>
         Kontak Kami

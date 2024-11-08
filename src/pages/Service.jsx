@@ -40,7 +40,7 @@ const Service = () => {
   ]);
 
   return (
-    <div id='Service' className='h-fit bg-gray-50 px-2 md:px-20 py-16'>
+    <div id='Service' className='h-fit bg-gray-100 px-2 md:px-20 py-16'>
       <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-16 text-green-600 text-center'>
         Service
       </div>
@@ -48,7 +48,7 @@ const Service = () => {
         {service.map((item, itemIdx) => (
           <div
             key={itemIdx}
-            className="bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
+            className="bg-white dark:bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
           >
             <div className='text-4xl text-white hover:text-green-600 hover:bg-white outline mb-4 bg-green-600 p-4 rounded-full absolute -mt-12'>{item.icon}</div>
             <div className='font-semibold text-lg mb-2 mt-10'>{item.title}</div>

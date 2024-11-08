@@ -1,8 +1,9 @@
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { useEffect, useRef, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaWhatsapp } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
@@ -29,15 +30,44 @@ const Header = () => {
     }, [width]);
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const handleScroll = () => {
+            // Toggle `scrolled` state based on scroll position
             setScrolled(window.scrollY >= 100);
-        });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Clean up event listener on component unmount
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
         <>
+            {/* Top Bar (only visible when not scrolled) */}
+            {!scrolled && (
+                <div className="bg-green-600 text-white text-sm py-2 px-4 md:px-[80px] flex justify-between items-center transition-all duration-300">
+                    <div className="flex items-center gap-4 whitespace-nowrap">
+                        <FaPhoneAlt className="inline-block" /> <span>0813 6930 4112</span>
+                        <FaEnvelope className="inline-block ml-4" /> <span>rumahklatenasri@gmail.com</span>
+                    </div>
+                    <div className="flex items-center gap-4 max-[650px]:hidden">
+                        <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
+                            <div className="flex items-center gap-2 hover:text-gray-600">
+                                <div>
+                                    Hubungi Kami
+                                </div>
+                                <div>
+                                    <FaWhatsapp />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            )}
+
+            {/* Main Header */}
             <header
-                className={`px-4 md:px-[80px] h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-0 ${scrolled
+                className={`px-4 md:px-[80px] h-20 flex items-center justify-between w-full fixed ${scrolled ? "top-0" : "top-8"} z-40 transition-all duration-300 py-0 ${scrolled
                     ? "shadow bg-white dark:bg-white dark:bg-opacity-90 bg-opacity-90 hover:bg-opacity-100"
                     : "shadow-none bg-white dark:bg-white"
                     }`}
