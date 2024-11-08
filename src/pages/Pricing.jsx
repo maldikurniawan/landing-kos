@@ -6,7 +6,7 @@ const Pricing = () => {
       title: "Sewa Perbulan",
       price: "1.500.000 / Bulan",
       detail: [
-        "Sudah Termasuk Air & Listrik",
+        "Sudah Termasuk Kompor",
         "Spring Bed",
         "Lemari Pakaian",
         "Kamar Mandi Dalam Kamar",
@@ -14,9 +14,9 @@ const Pricing = () => {
     },
     {
       title: "Sewa Pertahun",
-      price: "15.000.000 / Tahun",
+      price: "16.000.000 / Tahun",
       detail: [
-        "Sudah Termasuk Air & Listrik",
+        "Sudah Termasuk Kompor",
         "Spring Bed",
         "Lemari Pakaian",
         "Kamar Mandi Dalam Kamar",
@@ -34,10 +34,10 @@ const Pricing = () => {
         {contentReadMore.map((item, index) => (
           <div
             key={index}
-            className="rounded-lg bg-white hover:scale-105 hover:shadow transition-all duration-300"
+            className="rounded-lg bg-white dark:bg-white hover:scale-105 hover:shadow transition-all duration-300"
           >
-            <div className="text-lg font-semibold mb-2 bg-green-900 text-white rounded-t-lg p-4 text-center">{item.title}</div>
-            <div className='text-green-900 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>
+            <div className="text-lg font-semibold mb-2 bg-green-600 text-white rounded-t-lg p-4 text-center">{item.title}</div>
+            <div className='text-green-600 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>
             <ol className="text-base mb-4 text-fade space-y-4 font-light px-4">
               {item.detail.map((detail, index) => (
                 <li key={index} className="list-disc list-inside pl-2">
@@ -46,7 +46,7 @@ const Pricing = () => {
               ))}
             </ol>
             <div className='bg-gray-200 p-4'>
-              <div className='bg-green-900 text-white text-center p-1 whitespace-nowrap cursor-pointer rounded-lg'>
+              <div className='bg-green-600 text-white text-center p-1 whitespace-nowrap cursor-pointer rounded-lg'>
                 Sewa Sekarang
               </div>
             </div>

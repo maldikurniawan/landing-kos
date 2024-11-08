@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <p
           style={{ alignSelf: "stretch" }}
-          className="text-left text-base sm:text-lg md:text-xl leading-7 md:leading-9"
+          className="text-left text-base text-gray-600 sm:text-lg md:text-xl leading-7 md:leading-9"
         >
           {aboutUs.description}
         </p>

@@ -48,11 +48,11 @@ const Contact = () => {
         </div>
       </div>
       {/* Contact Information section */}
-      <div className='grid grid-cols-1 xl:grid-cols-3 gap-4 mt-[460px] max-[450px]:mt-[770px] justify-center items-center'>
+      <div className='grid grid-cols-1 xl:grid-cols-3 gap-4 mt-[460px] max-[450px]:mt-[650px] justify-center items-center'>
         {contact.map((item, itemIdx) => (
           <div
             key={itemIdx}
-            className="bg-white shadow-lg rounded-md p-6 flex flex-col justify-center items-center text-center"
+            className="bg-white dark:bg-white shadow-lg rounded-md p-6 flex flex-col justify-center items-center text-center"
           >
             <div className='text-4xl text-green-600 mb-2'>{item.icon}</div>
             <div className='font-semibold text-lg mb-1'>{item.title}</div>

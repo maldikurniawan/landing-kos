@@ -46,7 +46,7 @@ const FAQ = () => {
 
   return (
     <div id='FAQ' className='space-y-[3rem]'>
-      <div className="w-full bg-white overflow-hidden mb-[3rem]">
+      <div className="w-full bg-white dark:bg-white overflow-hidden mb-[3rem]">
         <div
           style={{
             position: "relative",

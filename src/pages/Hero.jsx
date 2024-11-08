@@ -24,7 +24,7 @@ const Hero = () => {
   ]);
 
   return (
-    <div id='Hero' className='xl:h-[720px] lg:h-[940px] md:h-[1140px] sm:h-[1100px] h-[1330px] mt-[5rem] relative bg-gray-100'>
+    <div id='Hero' className='xl:h-[720px] lg:h-[1060px] md:h-[1240px] sm:h-[1160px] h-[1330px] mt-[5rem] relative bg-gray-100'>
       {/* Background Image Section */}
       <div className='relative'>
         <img
@@ -69,7 +69,7 @@ const Hero = () => {
           {/* Right Panel (3/4 width) */}
           <div className='lg:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-4'>
             {hero.map((item, itemIdx) => (
-              <div key={itemIdx} className='bg-white p-10 xl:my-10 rounded-lg flex flex-col items-center text-center gap-3 shadow-lg'>
+              <div key={itemIdx} className='bg-white dark:bg-white p-10 xl:my-10 rounded-lg flex flex-col items-center text-center gap-3 shadow-lg'>
                 <div className='text-green-600 mb-4 text-4xl'>{item.icon}</div>
                 <div className='space-y-6'>
                   <div className='font-bold text-green-800 text-xl'>{item.title}</div>
