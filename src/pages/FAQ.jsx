@@ -91,7 +91,7 @@ const FAQ = () => {
                 data-aos-delay={index * 100} // Stagger animation for each item
               >
                 {/* Title */}
-                <div className="font-medium flex justify-between">
+                <div className="font-bold flex justify-between">
                   {item.question}
 
                   {/* Chevron Icon */}
@@ -106,7 +106,7 @@ const FAQ = () => {
 
                 {/* Content */}
                 {activeIndex === index && (
-                  <div className="font-light mt-2">
+                  <div className="font-light text-sm mt-2">
                     <p>{item.answer}</p>
                   </div>
                 )}

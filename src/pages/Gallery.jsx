@@ -1,31 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { FaTimes } from 'react-icons/fa';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import { SlMagnifierAdd } from 'react-icons/sl';
 
 const Gallery = () => {
   const allTabs = [
-    {
-      id: "all",
-      name: "ALL",
-    },
-    {
-      id: "rumah",
-      name: "RUMAH",
-    },
-    {
-      id: "ruangan",
-      name: "RUANGAN",
-    },
-    {
-      id: "kamar",
-      name: "KAMAR",
-    },
+    { id: "all", name: "ALL" },
+    { id: "rumah", name: "RUMAH" },
+    { id: "ruangan", name: "RUANGAN" },
+    { id: "kamar", name: "KAMAR" },
   ];
 
   const tabsRef = useRef([]);
+  const modalRef = useRef(null);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
   const [visibleImages, setVisibleImages] = useState([]);
   const [fadeOutImages, setFadeOutImages] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
 
   useEffect(() => {
     const setTabPosition = () => {
@@ -38,36 +32,32 @@ const Gallery = () => {
   }, [activeTabIndex]);
 
   useEffect(() => {
-    // Trigger the exit animation for the current images
     setFadeOutImages(visibleImages);
-
-    // Start the fade-out process, then replace with new images after delay
     const exitTimer = setTimeout(() => {
       setVisibleImages(tabImages[allTabs[activeTabIndex].id]);
-      setFadeOutImages([]); // Reset fadeOutImages once new images are loaded
-    }, 100); // Delay for fade-out animation duration
+      setFadeOutImages([]);
+    }, 100);
 
     return () => clearTimeout(exitTimer);
   }, [activeTabIndex]);
 
-  // Image mapping based on active tab
+  const openModal = (imageSrc) => {
+    setCurrentImage(imageSrc);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentImage(null);
+  };
+
+  useOnClickOutside(modalRef, closeModal);
+
   const tabImages = {
-    all: [
-      "assets/kos-land.jpg",
-      "assets/kos-potrait.jpg",
-    ],
-    rumah: [
-      "assets/kos-land.jpg",
-      "assets/kos-potrait.jpg",
-    ],
-    ruangan: [
-      "assets/kos-potrait.jpg",
-      "assets/kos-land.jpg",
-    ],
-    kamar: [
-      "assets/kos-land.jpg",
-      "assets/kos-potrait.jpg",
-    ],
+    all: ["assets/kos-land.jpg", "assets/kos-potrait.jpg"],
+    rumah: ["assets/kos-land.jpg", "assets/kos-potrait.jpg"],
+    ruangan: ["assets/kos-potrait.jpg", "assets/kos-land.jpg"],
+    kamar: ["assets/kos-land.jpg", "assets/kos-potrait.jpg"],
   };
 
   return (
@@ -84,7 +74,6 @@ const Gallery = () => {
         </span>
         {allTabs.map((tab, index) => {
           const isActive = activeTabIndex === index;
-
           return (
             <button
               key={tab.id}
@@ -99,17 +88,37 @@ const Gallery = () => {
         })}
       </div>
 
-      {/* Display the image based on the active tab */}
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center">
         {tabImages[allTabs[activeTabIndex].id].map((imageSrc, index) => (
-          <img
-            key={index}
-            src={imageSrc}
-            alt={`Gallery Image ${index}`}
-            className={`w-full max-h-[170px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
-          />
+          <div key={index} className="relative group">
+            <img
+              src={imageSrc}
+              alt={`Gallery Image ${index}`}
+              className={`w-full max-h-[170px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
+            />
+            <button
+              onClick={() => openModal(imageSrc)}
+              className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-semibold rounded-lg"
+            >
+              <SlMagnifierAdd className='w-16 h-16' />
+            </button>
+          </div>
         ))}
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75">
+          <div ref={modalRef} className="relative">
+            <img src={currentImage} alt="Fullscreen" className="w-full max-w-screen-lg max-h-screen rounded-lg" />
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 bg-gray-900 text-white p-2 rounded-full hover:bg-gray-600"
+            >
+              <FaTimes />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
