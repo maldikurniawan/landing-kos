@@ -24,6 +24,8 @@ const Gallery = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
+  const [visibleImages, setVisibleImages] = useState([]);
+  const [fadeOutImages, setFadeOutImages] = useState([]);
 
   useEffect(() => {
     const setTabPosition = () => {
@@ -34,6 +36,39 @@ const Gallery = () => {
 
     setTabPosition();
   }, [activeTabIndex]);
+
+  useEffect(() => {
+    // Trigger the exit animation for the current images
+    setFadeOutImages(visibleImages);
+
+    // Start the fade-out process, then replace with new images after delay
+    const exitTimer = setTimeout(() => {
+      setVisibleImages(tabImages[allTabs[activeTabIndex].id]);
+      setFadeOutImages([]); // Reset fadeOutImages once new images are loaded
+    }, 100); // Delay for fade-out animation duration
+
+    return () => clearTimeout(exitTimer);
+  }, [activeTabIndex]);
+
+  // Image mapping based on active tab
+  const tabImages = {
+    all: [
+      "assets/kos-land.jpg",
+      "assets/kos-potrait.jpg",
+    ],
+    rumah: [
+      "assets/kos-land.jpg",
+      "assets/kos-potrait.jpg",
+    ],
+    ruangan: [
+      "assets/kos-potrait.jpg",
+      "assets/kos-land.jpg",
+    ],
+    kamar: [
+      "assets/kos-land.jpg",
+      "assets/kos-potrait.jpg",
+    ],
+  };
 
   return (
     <div id="Gallery" className="h-screen bg-gray-100 px-4 md:px-[80px] py-16 md:py-[5rem]">
@@ -62,6 +97,18 @@ const Gallery = () => {
             </button>
           );
         })}
+      </div>
+
+      {/* Display the image based on the active tab */}
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center">
+        {tabImages[allTabs[activeTabIndex].id].map((imageSrc, index) => (
+          <img
+            key={index}
+            src={imageSrc}
+            alt={`Gallery Image ${index}`}
+            className={`w-full max-h-[170px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
+          />
+        ))}
       </div>
     </div>
   );

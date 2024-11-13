@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import { BsTelephone } from 'react-icons/bs';
 import { IoLocationOutline, IoMailOutline } from 'react-icons/io5';
 import AOS from 'aos';
@@ -35,22 +33,15 @@ const Contact = () => {
       <div className='relative z-10 font-bold text-2xl md:text-4xl mb-2 text-green-600 text-center' data-aos="fade-up">
         Kontak Kami
         <div className="absolute inset-0 h-screen -z-10 px-4 md:px-[80px] pb-[11rem] pt-24" data-aos="fade-up">
-          <MapContainer
-            center={[-5.349023596526887, 105.31452228437999]}
-            zoom={16}
-            scrollWheelZoom={false}
-            style={{ height: '100%', width: '100%' }}
-          >
-            <TileLayer
-              attribution=''
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[-5.349023596526887, 105.31452228437999]}>
-              <Popup>
-                Jl. Kelengkeng 10, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365
-              </Popup>
-            </Marker>
-          </MapContainer>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.8856720248264!2d105.31449099999999!3d-5.3489580000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3005a872cfb%3A0x789fb35923f0f286!2sRumah%20Kost%20Klaten%20Asri!5e1!3m2!1sid!2sid!4v1731480189546!5m2!1sid!2sid"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
 
