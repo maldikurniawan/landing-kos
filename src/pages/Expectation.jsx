@@ -48,7 +48,7 @@ const Expectation = () => {
             <img src={item.image} alt={item.title} className='w-full h-48 object-cover' />
             <div className='p-6 flex flex-col items-center text-center transition-colors duration-300'>
               <div className='font-semibold text-green-600 text-lg mb-2 group-hover:text-white'>{item.title}</div>
-              <div className='text-gray-600 group-hover:text-white text-start'>{item.description}</div>
+              <div className='text-gray-600 group-hover:text-white text-justify'>{item.description}</div>
             </div>
           </div>
         ))}

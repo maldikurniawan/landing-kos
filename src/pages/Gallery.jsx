@@ -54,14 +54,26 @@ const Gallery = () => {
   useOnClickOutside(modalRef, closeModal);
 
   const tabImages = {
-    all: ["assets/kos-land.jpg", "assets/kos-potrait.jpg"],
-    rumah: ["assets/kos-land.jpg", "assets/kos-potrait.jpg"],
-    ruangan: ["assets/kos-potrait.jpg", "assets/kos-land.jpg"],
-    kamar: ["assets/kos-land.jpg", "assets/kos-potrait.jpg"],
+    all: [
+      "assets/kos-land.jpg",
+      "assets/kos-potrait.jpg",
+    ],
+    rumah: [
+      "assets/kos-potrait.jpg",
+      "assets/kos-land.jpg",
+    ],
+    ruangan: [
+      "assets/kos-land.jpg",
+      "assets/kos-potrait.jpg",
+    ],
+    kamar: [
+      "assets/kos-potrait.jpg",
+      "assets/kos-land.jpg",
+    ],
   };
 
   return (
-    <div id="Gallery" className="h-screen bg-gray-100 px-4 md:px-[80px] py-16 md:py-[5rem]">
+    <div id="Gallery" className="h-fit bg-gray-100 px-4 md:px-[80px] py-16 md:py-[5rem]">
       <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-10 text-green-600 text-center">
         Gallery
       </div>
@@ -94,7 +106,7 @@ const Gallery = () => {
             <img
               src={imageSrc}
               alt={`Gallery Image ${index}`}
-              className={`w-full max-h-[170px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
+              className={`w-full xl:h-[260px] sm:h-[200px] h-[300px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
             />
             <button
               onClick={() => openModal(imageSrc)}

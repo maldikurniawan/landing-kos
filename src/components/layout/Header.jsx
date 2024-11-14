@@ -47,12 +47,12 @@ const Header = () => {
             {!scrolled && (
                 <div className="bg-green-600 text-white text-sm py-2 px-4 md:px-[80px] flex justify-between items-center transition-all duration-300">
                     <div className="flex items-center gap-2 max-[450px]:text-xs whitespace-nowrap">
-                        <FaPhoneAlt className="inline-block" /> <span>0813 6930 4112</span>
+                        <FaPhoneAlt className="inline-block" /> <span>0813-6930-4112</span>
                         <FaEnvelope className="inline-block ml-2" /> <span>rumahklatenasri@gmail.com</span>
                     </div>
                     <div className="flex items-center gap-4 max-[650px]:hidden">
                         <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
-                            <div className="flex items-center gap-2 hover:text-gray-600">
+                            <div className="flex items-center gap-2 hover:font-bold">
                                 <div>
                                     Hubungi Kami
                                 </div>

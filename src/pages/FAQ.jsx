@@ -1,54 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { IoChevronDown, IoChevronForward } from "react-icons/io5";
+import React, { useEffect } from 'react';
+import { FaRegQuestionCircle } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
   useEffect(() => {
     AOS.init({
       duration: 800,
     });
   }, []);
 
-  const toggleCollapse = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   const faq = [
     {
-      question: "Apakah kosan putri ini memiliki jam malam?",
-      answer:
-        "Ya, kosan putri ini memiliki jam malam. Penghuni diharapkan sudah berada di kosan maksimal pukul 22:00 untuk menjaga keamanan dan ketertiban. Pastikan untuk menjaga volume suara, terutama ketika berbicara atau mendengarkan musik, agar tidak mengganggu tetangga yang sedang beristirahat.",
+      rule: "Penghuni wajib memberikan informasi identitas diri saat mendaftar sebagai bentuk persyaratan dan untuk tujuan keamanan."
     },
     {
-      question: "Apakah kosan putri ini menerima tamu laki-laki?",
-      answer:
-        "Umumnya tamu laki-laki tidak diperbolehkan masuk ke area kamar. Namun, tamu laki-laki dapat berkunjung ke area umum atau ruang tamu dengan batasan waktu tertentu sesuai aturan kos.",
+      rule: "Tamu pria dilarang memasuki area kamar kosan. Namun, tamu pria diperbolehkan berada di ruang tamu atau area umum sesuai dengan batasan waktu yang telah ditentukan oleh pengelola."
     },
     {
-      question: "Bolehkah saya menggandakan kunci kamar atau gerbang kosan?",
-      answer:
-        "Tidak, penghuni tidak diperbolehkan menggandakan kunci kamar atau gerbang. Apabila kunci hilang, segera hubungi pengelola kos untuk penanganan lebih lanjut.",
+      rule: "Penghuni diharapkan menjaga kebersihan dan merawat fasilitas bersama setiap hari. Pastikan area umum selalu dalam kondisi bersih dan rapi setelah digunakan."
     },
     {
-      question: "Apakah penghuni kos wajib memberikan informasi identitas diri?",
-      answer:
-        "Ya, setiap penghuni wajib memberikan informasi identitas diri sebagai syarat tinggal di kos. Hal ini penting untuk keamanan dan administrasi.",
+      rule: "Penghuni wajib meminimalisasi kebisingan setelah pukul 22:00 demi kenyamanan bersama. Hindari aktivitas yang menimbulkan suara keras, seperti mendengarkan musik dengan volume tinggi atau berbicara dengan suara lantang."
     },
     {
-      question: "Apa yang harus saya lakukan jika hendak keluar area kos?",
-      answer:
-        "Pastikan pintu gerbang kos tertutup dan terkunci dengan baik saat Anda keluar. Ini untuk memastikan keamanan semua penghuni kos.",
+      rule: "Menggandakan kunci kamar atau gerbang kosan tanpa izin dari pengelola sangat dilarang. Jika kunci hilang, segera laporkan kepada pengelola untuk penanganan lebih lanjut."
     },
     {
-      question:
-        "Apa yang harus dilakukan jika ada fasilitas yang rusak atau ada masalah listrik?",
-      answer:
-        "Jika ada kerusakan fasilitas, seperti masalah listrik atau sumur bor, segera laporkan kepada pengelola kos. Pengelola akan segera menindaklanjuti permasalahan tersebut untuk kenyamanan penghuni.",
+      rule: "Segera laporkan kepada pengelola jika terdapat kerusakan pada fasilitas, terutama dalam kasus konsleting listrik atau masalah pada sumur bor. Hal ini penting untuk menjaga keamanan dan kenyamanan seluruh penghuni."
     },
+    {
+      rule: "Penghuni diharapkan menjaga tata tertib dan ketertiban lingkungan sekitar, serta menghormati tetangga dan sesama penghuni untuk menciptakan lingkungan yang aman dan nyaman bagi semua."
+    }
   ];
+
 
   return (
     <div id='FAQ' className='space-y-[3rem]'>
@@ -86,30 +71,16 @@ const FAQ = () => {
               <div
                 key={index}
                 className="bg-gray-100 rounded-lg p-4 cursor-pointer"
-                onClick={() => toggleCollapse(index)}
                 data-aos="fade-up" // AOS animation type
                 data-aos-delay={index * 100} // Stagger animation for each item
               >
                 {/* Title */}
-                <div className="font-bold flex justify-between">
-                  {item.question}
-
-                  {/* Chevron Icon */}
+                <div className="font-bold flex gap-2">
                   <div>
-                    {activeIndex === index ? (
-                      <IoChevronDown className="text-2xl" />
-                    ) : (
-                      <IoChevronForward className="text-2xl" />
-                    )}
+                    <FaRegQuestionCircle className="text-2xl" />
                   </div>
+                  {item.rule}
                 </div>
-
-                {/* Content */}
-                {activeIndex === index && (
-                  <div className="font-light text-sm mt-2">
-                    <p>{item.answer}</p>
-                  </div>
-                )}
               </div>
             ))}
           </div>

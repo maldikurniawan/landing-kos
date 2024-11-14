@@ -57,14 +57,14 @@ const Service = () => {
           <div
             key={itemIdx}
             className="group bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
-            data-aos="fade-up" // AOS animation type
-            data-aos-delay={itemIdx * 100} // Stagger animation for each item
+            data-aos="fade-up"
+            data-aos-delay={itemIdx * 100}
           >
             <div className='text-4xl text-white group-hover:text-green-600 group-hover:bg-white outline mb-4 bg-green-600 p-4 rounded-full absolute -mt-12'>
               {item.icon}
             </div>
             <div className='font-semibold text-lg mb-2 mt-10 group-hover:text-green-600'>{item.title}</div>
-            <div className='text-gray-600 text-start p-4'>{item.description}</div>
+            <div className='text-gray-600 text-justify p-4'>{item.description}</div>
           </div>
         ))}
       </div>

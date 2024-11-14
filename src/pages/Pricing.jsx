@@ -8,20 +8,22 @@ const Pricing = () => {
       title: "Sewa Perbulan",
       price: "1.500.000 / Bulan",
       detail: [
-        "Sudah Termasuk Kompor",
-        "Spring Bed",
-        "Lemari Pakaian",
-        "Kamar Mandi Dalam Kamar",
+        "Fasilitas lengkap dengan listrik token",
+        "Kasur dan lemari pakaian",
+        "Kamar mandi dalam ruangan",
+        "Kompor dan kipas angin tersedia",
+        "Air bersih dari sumur bor"
       ],
     },
     {
       title: "Sewa Pertahun",
       price: "16.000.000 / Tahun",
       detail: [
-        "Sudah Termasuk Kompor",
-        "Spring Bed",
-        "Lemari Pakaian",
-        "Kamar Mandi Dalam Kamar",
+        "Fasilitas lengkap dengan listrik token",
+        "Kasur dan lemari pakaian",
+        "Kamar mandi dalam ruangan",
+        "Kompor dan kipas angin tersedia",
+        "Air bersih dari sumur bor"
       ],
     },
   ]);
@@ -56,9 +58,11 @@ const Pricing = () => {
               ))}
             </ol>
             <div className='bg-gray-200 p-4'>
-              <div className='bg-green-600 text-white text-center p-1 whitespace-nowrap cursor-pointer rounded-lg'>
-                Sewa Sekarang
-              </div>
+              <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
+                <div className='button text-center'>
+                  Sewa Sekarang
+                </div>
+              </a>
             </div>
           </div>
         ))}

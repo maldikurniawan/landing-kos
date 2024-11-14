@@ -55,7 +55,7 @@ const Hero = () => {
           Welcome to Rumah Klaten Asri
         </div>
         <div className='text-md sm:text-xl' data-aos="fade-up" data-aos-delay="200">
-          Kos Putri Dengan Desain Rumah Kembar
+          Kos Putri Berdesain Rumah Kembar
         </div>
         <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 hover:bg-green-600 hover:text-green-100 font-bold text-green-600 p-2 rounded-lg' data-aos="fade-up" data-aos-delay="400">
           <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
@@ -77,7 +77,7 @@ const Hero = () => {
             <div className='font-bold text-xl sm:text-2xl'>
               Mengapa Memilih Rumah Klaten Asri?
             </div>
-            <div className='mt-4 text-sm sm:text-base'>
+            <div className='mt-4 text-sm sm:text-base text-justify'>
               Dengan lokasi yang strategis, tempat yang nyaman, serta fasilitas yang sangat lengkap, pengalaman Anda akan menjadi lebih menyenangkan. Tempat ini juga cocok dijadikan homestay untuk menginap hanya dalam hitungan hari.
             </div>
           </div>

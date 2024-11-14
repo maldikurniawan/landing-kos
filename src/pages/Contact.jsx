@@ -18,7 +18,7 @@ const Contact = () => {
     },
     {
       title: "Hubungi Kami",
-      description: "0813 6930 4112",
+      description: "0813-6930-4112",
       icon: <BsTelephone />,
     },
   ]);

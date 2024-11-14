@@ -6,7 +6,7 @@ const About = () => {
   const [aboutUs] = useState({
     title: "Tentang Kami",
     description:
-      "Rumah Klaten Asri adalah kos-kosan khusus wanita yang sedang berkembang di Bandar Lampung. Dilengkapi dengan fasilitas lengkap dan berlokasi strategis, sehingga memudahkan akses ke berbagai tempat, memungkinkan kamu mengatur waktu tanpa perlu terburu-buru mencapai tujuan.",
+      "Rumah Klaten Asri adalah kos-kosan khusus wanita yang sedang berkembang di Bandar Lampung, berlokasi strategis dekat ITERA. Dilengkapi dengan fasilitas lengkap, kos ini memudahkan akses ke berbagai tempat penting, memungkinkan kamu mengatur waktu tanpa perlu terburu-buru mencapai tujuan.",
     image: "/assets/kos-land.jpg",
   });
 
@@ -27,7 +27,7 @@ const About = () => {
         </div>
         <p
           style={{ alignSelf: "stretch" }}
-          className="text-left text-base text-gray-600 sm:text-lg md:text-xl leading-7 md:leading-9"
+          className="text-justify text-base text-gray-600 sm:text-lg md:text-xl leading-7 md:leading-9"
         >
           {aboutUs.description}
         </p>
