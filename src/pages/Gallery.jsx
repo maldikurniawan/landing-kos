@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const Gallery = () => {
   const allTabs = [
@@ -60,6 +60,7 @@ const Gallery = () => {
 
   const tabImages = {
     all: [
+      "assets/kos-potrait.jpg",
       "assets/kos-land.jpg",
       "assets/kos-potrait.jpg",
     ],
@@ -129,10 +130,15 @@ const Gallery = () => {
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
+              centeredSlides={true}
               loop={true}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
               pagination={{ clickable: true }}
               navigation={true}
-              modules={[Navigation, Pagination]}
+              modules={[Autoplay, Navigation, Pagination]}
               initialSlide={currentImageIndex}
               className="w-full"
             >

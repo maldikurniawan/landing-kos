@@ -53,12 +53,8 @@ const Header = () => {
                     <div className="flex items-center gap-4 max-[650px]:hidden">
                         <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
                             <div className="flex items-center gap-2 hover:font-bold">
-                                <div>
-                                    Hubungi Kami
-                                </div>
-                                <div>
-                                    <FaWhatsapp />
-                                </div>
+                                <span>Hubungi Kami</span>
+                                <FaWhatsapp />
                             </div>
                         </a>
                     </div>

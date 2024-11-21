@@ -8,7 +8,7 @@ const Pricing = () => {
       title: "Sewa Perbulan",
       price: "1.500.000 / Bulan",
       detail: [
-        "Fasilitas lengkap dengan listrik token",
+        "Fasilitas lengkap",
         "Kasur dan lemari pakaian",
         "Kamar mandi dalam ruangan",
         "Kompor dan kipas angin tersedia",
@@ -19,7 +19,7 @@ const Pricing = () => {
       title: "Sewa Pertahun",
       price: "16.000.000 / Tahun",
       detail: [
-        "Fasilitas lengkap dengan listrik token",
+        "Fasilitas lengkap",
         "Kasur dan lemari pakaian",
         "Kamar mandi dalam ruangan",
         "Kompor dan kipas angin tersedia",
@@ -52,7 +52,7 @@ const Pricing = () => {
             <div className='text-green-600 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>
             <ol className="text-base mb-4 text-fade space-y-4 font-light px-4">
               {item.detail.map((detail, index) => (
-                <li key={index} className="list-disc list-inside pl-2">
+                <li key={index} className="list-disc list-inside max-[450px]:text-sm pl-2">
                   {detail}
                 </li>
               ))}
