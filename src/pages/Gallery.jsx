@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { SlMagnifierAdd } from 'react-icons/sl';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const Gallery = () => {
   const allTabs = [
@@ -19,7 +24,7 @@ const Gallery = () => {
   const [visibleImages, setVisibleImages] = useState([]);
   const [fadeOutImages, setFadeOutImages] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const setTabPosition = () => {
@@ -41,14 +46,14 @@ const Gallery = () => {
     return () => clearTimeout(exitTimer);
   }, [activeTabIndex]);
 
-  const openModal = (imageSrc) => {
-    setCurrentImage(imageSrc);
+  const openModal = (imageIndex) => {
+    setCurrentImageIndex(imageIndex);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setCurrentImage(null);
+    setCurrentImageIndex(0);
   };
 
   useOnClickOutside(modalRef, closeModal);
@@ -106,10 +111,10 @@ const Gallery = () => {
             <img
               src={imageSrc}
               alt={`Gallery Image ${index}`}
-              className={`w-full xl:h-[260px] sm:h-[200px] h-[300px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
+              className={`w-full object-cover xl:h-[260px] sm:h-[200px] h-[300px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
             />
             <button
-              onClick={() => openModal(imageSrc)}
+              onClick={() => openModal(index)}
               className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-semibold rounded-lg"
             >
               <SlMagnifierAdd className='w-16 h-16' />
@@ -119,14 +124,34 @@ const Gallery = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75">
-          <div ref={modalRef} className="relative">
-            <img src={currentImage} alt="Fullscreen" className="w-full max-w-screen-lg max-h-screen rounded-lg" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+          <div ref={modalRef} className="relative w-full max-w-screen-lg">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{ clickable: true }}
+              navigation={true}
+              modules={[Navigation, Pagination]}
+              initialSlide={currentImageIndex}
+              className="w-full"
+            >
+              {tabImages[allTabs[activeTabIndex].id].map((imageSrc, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={imageSrc}
+                    alt={`Slide ${index}`}
+                    className="w-full h-[600px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-lg"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 bg-gray-900 text-white p-2 rounded-full hover:bg-gray-600"
+              className="absolute top-4 right-4 bg-black text-white p-2 rounded-full hover:border z-50"
             >
-              <FaTimes />
+              <FaTimes className="w-6 h-6" />
             </button>
           </div>
         </div>
