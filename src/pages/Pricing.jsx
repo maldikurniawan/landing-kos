@@ -52,7 +52,7 @@ const Pricing = () => {
             <div className='text-green-600 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>
             <ol className="text-base mb-4 text-fade space-y-4 font-light px-4">
               {item.detail.map((detail, index) => (
-                <li key={index} className="list-disc list-inside max-[450px]:text-sm pl-2">
+                <li key={index} className="list-disc list-inside max-[450px]:text-xs pl-2">
                   {detail}
                 </li>
               ))}
