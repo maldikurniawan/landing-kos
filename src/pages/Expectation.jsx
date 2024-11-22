@@ -7,22 +7,22 @@ const Expectation = () => {
     {
       title: "Misi Kami",
       description: "Menciptakan lingkungan kos yang nyaman, aman, dan menyenangkan, di mana para penghuni merasa seperti di rumah sendiri.",
-      image: "assets/kos-land.jpg",
+      image: "assets/ruangtamu1.jpg",
     },
     {
       title: "Rencana Kami",
       description: "Menghadirkan aksesibilitas yang tinggi, memudahkan para penghuni kos untuk mencapai berbagai fasilitas umum dan kebutuhan sehari-hari.",
-      image: "assets/kos-land.jpg",
+      image: "assets/halaman3.jpg",
     },
     {
       title: "Visi Kami",
       description: "Menyediakan hunian yang berfokus pada kenyamanan dan keamanan, dirancang khusus untuk mendukung putri-putri yang tinggal di kos kami.",
-      image: "assets/kos-land.jpg",
+      image: "assets/dapur2.jpg",
     },
     {
       title: "Bantuan Kami",
       description: "Menawarkan fasilitas lengkap untuk mendukung kebutuhan para penghuni kos, menjadikan pengalaman tinggal lebih praktis dan nyaman.",
-      image: "assets/kos-land.jpg",
+      image: "assets/kamar2.jpg",
     },
   ]);
 

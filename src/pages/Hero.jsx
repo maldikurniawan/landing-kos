@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Background Image Section */}
       <div className='relative' data-aos="fade-in">
         <img
-          src="assets/kos-land.jpg"
+          src="assets/halaman2.jpg"
           alt="Hero"
           className='w-full h-[300px] md:h-[500px] object-cover'
         />

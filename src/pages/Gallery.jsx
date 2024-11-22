@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { SlMagnifierAdd } from 'react-icons/sl';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Modal } from '@/components';
 
 const Gallery = () => {
   const allTabs = [
@@ -17,7 +16,6 @@ const Gallery = () => {
   ];
 
   const tabsRef = useRef([]);
-  const modalRef = useRef(null);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
@@ -56,25 +54,26 @@ const Gallery = () => {
     setCurrentImageIndex(0);
   };
 
-  useOnClickOutside(modalRef, closeModal);
-
   const tabImages = {
     all: [
-      "assets/kos-potrait.jpg",
-      "assets/kos-land.jpg",
-      "assets/kos-potrait.jpg",
+      "assets/halaman2.jpg",
+      "assets/kamar2.jpg",
+      "assets/ruangtamu1.jpg",
+      "assets/dapur1.jpg",
+      "assets/toilet1.jpg",
+      "assets/halaman1.jpg",
     ],
     rumah: [
-      "assets/kos-potrait.jpg",
-      "assets/kos-land.jpg",
+      "assets/halaman2.jpg",
+      "assets/halaman1.jpg",
     ],
     ruangan: [
-      "assets/kos-land.jpg",
-      "assets/kos-potrait.jpg",
+      "assets/ruangtamu1.jpg",
+      "assets/ruangtamu2.jpg",
     ],
     kamar: [
-      "assets/kos-potrait.jpg",
-      "assets/kos-land.jpg",
+      "assets/kamar1.jpg",
+      "assets/kamar3.jpg",
     ],
   };
 
@@ -124,44 +123,33 @@ const Gallery = () => {
         ))}
       </div>
 
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
-          <div ref={modalRef} className="relative w-full max-w-screen-lg">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={30}
-              centeredSlides={true}
-              loop={true}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              pagination={{ clickable: true }}
-              navigation={true}
-              modules={[Autoplay, Navigation, Pagination]}
-              initialSlide={currentImageIndex}
-              className="w-full"
-            >
-              {tabImages[allTabs[activeTabIndex].id].map((imageSrc, index) => (
-                <SwiperSlide key={index}>
-                  <img
-                    src={imageSrc}
-                    alt={`Slide ${index}`}
-                    className="w-full h-[600px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-lg"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 bg-black text-white p-2 rounded-full hover:border z-50"
-            >
-              <FaTimes className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-      )}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Autoplay, Navigation, Pagination]}
+          initialSlide={currentImageIndex}
+          className="w-full"
+        >
+          {tabImages[allTabs[activeTabIndex].id].map((imageSrc, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={imageSrc}
+                alt={`Slide ${index}`}
+                className="w-full h-[600px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-lg"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Modal>
     </div>
   );
 };

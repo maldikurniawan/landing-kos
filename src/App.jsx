@@ -47,7 +47,7 @@ export default function App() {
       {showScrollToTop && (
         <button
           onClick={scrollToTop}
-          className='opacity-100 z-50'
+          className='opacity-100 z-40'
           style={{
             position: 'fixed',
             bottom: '20px',
