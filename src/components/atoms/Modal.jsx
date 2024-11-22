@@ -1,24 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 const Modal = ({ isOpen, onClose, children }) => {
   const modalRef = useRef(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      // Disable interaksi pada elemen di belakang modal (termasuk sentuhan)
-      document.body.style.overflow = 'hidden'; // Menonaktifkan scroll
-      document.body.style.pointerEvents = 'none';
-    } else {
-      document.body.style.overflow = ''; // Mengaktifkan scroll kembali
-      document.body.style.pointerEvents = '';
-    }
-    return () => {
-      document.body.style.overflow = ''; // Reset scroll
-      document.body.style.pointerEvents = ''; // Reset pointer events
-    };
-  }, [isOpen]);
 
   useOnClickOutside(modalRef, onClose);
 
