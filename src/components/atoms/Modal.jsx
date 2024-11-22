@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
@@ -17,6 +17,21 @@ const Modal = ({ isOpen, onClose, children }) => {
       setIsClosing(false); // Reset closing state after the modal is removed
     }, 300); // 300ms delay
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      // Disable scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Enable scrolling when modal is closed
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup function to restore overflow on component unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   if (!isOpen && !isClosing) return null;
 
