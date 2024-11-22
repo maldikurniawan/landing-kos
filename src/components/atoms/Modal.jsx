@@ -5,15 +5,18 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 const Modal = ({ isOpen, onClose, children }) => {
   const modalRef = useRef(null);
 
-  // Menambahkan dan menghapus pointer-events pada body
   useEffect(() => {
     if (isOpen) {
+      // Disable interaksi pada elemen di belakang modal (termasuk sentuhan)
+      document.body.style.overflow = 'hidden'; // Menonaktifkan scroll
       document.body.style.pointerEvents = 'none';
     } else {
+      document.body.style.overflow = ''; // Mengaktifkan scroll kembali
       document.body.style.pointerEvents = '';
     }
     return () => {
-      document.body.style.pointerEvents = '';
+      document.body.style.overflow = ''; // Reset scroll
+      document.body.style.pointerEvents = ''; // Reset pointer events
     };
   }, [isOpen]);
 
@@ -30,6 +33,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         <FaTimes className="w-6 h-6" />
       </button>
       <div ref={modalRef} className="relative w-full max-w-screen-lg bg-white rounded-lg shadow-lg">
+        {/* Close Button */}
         {children}
       </div>
     </div>
