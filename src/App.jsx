@@ -33,7 +33,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <Hero />
       <About />
