@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  -webkit-text-size-adjust: 100%; /* Safari dan iOS */
+  -ms-text-size-adjust: 100%;    /* Internet Explorer */
+  text-size-adjust: 100%;        /* Browser modern */
+}
 .gm-style-iw-d {
   overflow: hidden !important;
 }
@@ -50,9 +55,9 @@
   padding: 15px 25px;
   border: unset;
   border-radius: 15px;
-  color: #16A34A;
+  color: #16a34a;
   z-index: 1;
-  background: #FFF;
+  background: #fff;
   position: relative;
   font-weight: 1000;
   font-size: 17px;
@@ -70,7 +75,7 @@
   height: 100%;
   width: 0;
   border-radius: 15px;
-  background-color: #16A34A;
+  background-color: #16a34a;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
@@ -78,7 +83,7 @@
 }
 
 .button:hover {
-  color: #FFF;
+  color: #fff;
 }
 
 .button:hover::before {
