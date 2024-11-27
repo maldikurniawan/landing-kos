@@ -22,7 +22,7 @@ const Expectation = () => {
     {
       title: "Bantuan Kami",
       description: "Menawarkan fasilitas lengkap untuk mendukung kebutuhan para penghuni kos, menjadikan pengalaman tinggal lebih praktis dan nyaman.",
-      image: "assets/kamar2.jpg",
+      image: "assets/halaman4.jpg",
     },
   ]);
 
