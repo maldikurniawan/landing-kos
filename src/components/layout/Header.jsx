@@ -32,7 +32,7 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             // Toggle `scrolled` state based on scroll position
-            setScrolled(window.scrollY >= 100);
+            setScrolled(window.scrollY >= 0.1);
         };
 
         window.addEventListener("scroll", handleScroll);

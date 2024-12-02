@@ -38,16 +38,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="Hero" className="bg-gray-100 py-10">
+    <div id="Hero" className="bg-gray-100 py-10 xl:h-[770px]">
       {/* Background Image Section */}
       <div className="relative">
         <img
           src="assets/halaman2.jpg"
           alt="Hero"
-          className="w-full h-[300px] md:h-[500px] object-cover xl:absolute"
+          className="w-full h-[300px] md:h-[500px] object-cover"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex flex-col justify-center xl:mt-[200px] items-start px-4 md:px-[80px] text-white">
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-[80px] text-white">
           <div className="font-bold text-xl sm:text-4xl" data-aos="fade-up">
             Welcome to Rumah Klaten Asri
           </div>
@@ -70,7 +70,9 @@ const Hero = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="container mx-auto px-4 mt-10 xl:mt-[320px]">
+      <div
+        className="container mx-auto px-4 mt-10 relative xl:absolute xl:top-[400px] xl:left-1/2 xl:-translate-x-1/2 xl:z-30"
+      >
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Panel */}
           <div
