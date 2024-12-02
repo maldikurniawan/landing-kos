@@ -36,7 +36,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen && !isClosing) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
       <button
         onClick={handleClose}
         className="absolute top-4 right-4 bg-black text-white p-2 rounded-full hover:border z-50"

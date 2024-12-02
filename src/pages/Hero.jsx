@@ -17,7 +17,7 @@ const Hero = () => {
     },
     {
       title: "Fasilitas",
-      description: "Dengan fasilitas yang lenkap dapat membantu semua aktifitas kamu di kos-kosan.",
+      description: "Dengan fasilitas yang lengkap dapat membantu semua aktivitas kamu di kos-kosan.",
       icon: <BsHouseCheck />,
       animation: 'fade-up',
       delay: 200,
@@ -38,64 +38,65 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id='Hero' className='xl:h-[720px] lg:h-[1060px] md:h-[1240px] sm:h-[1160px] h-[1380px] mt-[5rem] relative bg-gray-100'>
+    <div id="Hero" className="bg-gray-100 py-10">
       {/* Background Image Section */}
-      <div className='relative' data-aos="fade-in">
+      <div className="relative">
         <img
           src="assets/halaman2.jpg"
           alt="Hero"
-          className='w-full h-[300px] md:h-[500px] object-cover'
+          className="w-full h-[300px] md:h-[500px] object-cover xl:absolute"
         />
-        <div className='absolute inset-0 bg-black opacity-50'></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex flex-col justify-center xl:mt-[200px] items-start px-4 md:px-[80px] text-white">
+          <div className="font-bold text-xl sm:text-4xl" data-aos="fade-up">
+            Welcome to Rumah Klaten Asri
+          </div>
+          <div className="text-md sm:text-xl mt-2" data-aos="fade-up" data-aos-delay="200">
+            Kos Putri Berdesain Rumah Kembar
+          </div>
+          <div
+            className="mt-6 inline-block bg-green-100 hover:bg-green-600 hover:text-green-100 font-bold text-green-600 p-2 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center gap-2 cursor-pointer">
+                <FaArrowAltCircleRight />
+                <span>Sewa Sekarang</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
 
-      {/* Overlay Content */}
-      <div className='absolute inset-0 flex flex-col items-start text-white px-4 md:px-[80px]'>
-        <div className='font-bold text-xl sm:text-4xl mt-20 md:mt-32' data-aos="fade-up">
-          Welcome to Rumah Klaten Asri
-        </div>
-        <div className='text-md sm:text-xl' data-aos="fade-up" data-aos-delay="200">
-          Kos Putri Berdesain Rumah Kembar
-        </div>
-        <div className='mt-6 md:mt-10 mb-4 inline-block bg-green-100 hover:bg-green-600 hover:text-green-100 font-bold text-green-600 p-2 rounded-lg' data-aos="fade-up" data-aos-delay="400">
-          <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
-            <div className='flex items-center gap-2 cursor-pointer'>
-              <div>
-                <FaArrowAltCircleRight />
-              </div>
-              <div>
-                Sewa Sekarang
-              </div>
-            </div>
-          </a>
-        </div>
-
-        {/* Main Content Section */}
-        <div className='flex flex-col lg:flex-row gap-6 mt-6 w-full max-w-6xl'>
-          {/* Left Panel (1/4 width) */}
-          <div className='bg-green-600 text-white p-6 rounded-lg xl:w-1/4 lg:w-[360px] h-fit flex-shrink-0' data-aos="fade-up">
-            <div className='font-bold text-xl sm:text-2xl'>
-              Mengapa Memilih Rumah Klaten Asri?
-            </div>
-            <div className='mt-4 text-sm sm:text-base text-justify'>
-              Dengan lokasi yang strategis, tempat yang nyaman, serta fasilitas yang sangat lengkap, pengalaman Anda akan menjadi lebih menyenangkan. Tempat ini juga cocok dijadikan homestay untuk menginap hanya dalam hitungan hari.
-            </div>
+      {/* Main Content Section */}
+      <div className="container mx-auto px-4 mt-10 xl:mt-[320px]">
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Left Panel */}
+          <div
+            className="bg-green-600 text-white p-6 rounded-lg lg:w-1/3"
+            data-aos="fade-up"
+          >
+            <h2 className="font-bold text-xl sm:text-2xl">Mengapa Memilih Rumah Klaten Asri?</h2>
+            <p className="mt-4 text-sm sm:text-base text-justify">
+              Dengan lokasi yang strategis, tempat yang nyaman, serta fasilitas yang sangat lengkap,
+              pengalaman Anda akan menjadi lebih menyenangkan. Tempat ini juga cocok dijadikan
+              homestay untuk menginap hanya dalam hitungan hari.
+            </p>
           </div>
 
-          {/* Right Panel (3/4 width) */}
-          <div className='lg:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-4'>
-            {hero.map((item, itemIdx) => (
+          {/* Right Panel */}
+          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            {hero.map((item, idx) => (
               <div
-                key={itemIdx}
-                className='bg-white p-10 xl:my-10 rounded-lg flex flex-col items-center text-center gap-3 shadow-lg'
+                key={idx}
+                className="bg-white p-8 rounded-lg flex flex-col items-center text-center shadow-lg"
                 data-aos={item.animation}
                 data-aos-delay={item.delay}
               >
-                <div className='text-green-600 mb-4 text-4xl'>{item.icon}</div>
-                <div className='space-y-6'>
-                  <div className='font-bold text-green-800 text-xl'>{item.title}</div>
-                  <div className='text-gray-700 text-sm text-start'>{item.description}</div>
-                </div>
+                <div className="text-green-600 mb-4 text-4xl">{item.icon}</div>
+                <h3 className="font-bold text-green-800 text-lg">{item.title}</h3>
+                <p className="text-gray-700 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
