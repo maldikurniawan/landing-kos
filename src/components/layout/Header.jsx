@@ -47,7 +47,7 @@ const Header = () => {
             {!scrolled && (
                 <div className="bg-green-600 text-white text-sm py-2 px-4 md:px-[80px] flex flex-wrap justify-between items-center gap-2 md:gap-0 transition-all duration-300">
                     {/* Contact Info */}
-                    <div className="flex flex-wrap items-center gap-2 whitespace-nowrap max-[450px]:text-[11px]">
+                    <div className="flex flex-wrap items-center gap-2 whitespace-nowrap max-[450px]:text-[9px]">
                         <FaPhoneAlt className="inline-block" />
                         <span>0813-6930-4112</span>
                         <FaEnvelope className="inline-block ml-2" />
