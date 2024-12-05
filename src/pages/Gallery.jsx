@@ -35,11 +35,12 @@ const Gallery = () => {
   }, [activeTabIndex]);
 
   useEffect(() => {
+    // Set the fade-out images when the active tab changes
     setFadeOutImages(visibleImages);
     const exitTimer = setTimeout(() => {
       setVisibleImages(tabImages[allTabs[activeTabIndex].id]);
-      setFadeOutImages([]);
-    }, 100);
+      setFadeOutImages([]); // Reset fade-out images after animation
+    }, 500); // Adjust timing to match the fade-out duration
 
     return () => clearTimeout(exitTimer);
   }, [activeTabIndex]);
@@ -106,12 +107,15 @@ const Gallery = () => {
       </div>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center">
-        {tabImages[allTabs[activeTabIndex].id].map((imageSrc, index) => (
-          <div key={index} className="relative group">
+        {visibleImages.map((imageSrc, index) => (
+          <div
+            key={index}
+            className={`relative group transition-opacity duration-500 ${fadeOutImages.includes(imageSrc) ? 'opacity-0' : 'opacity-100'}`}
+          >
             <img
               src={imageSrc}
               alt={`Gallery Image ${index}`}
-              className={`w-full object-cover xl:h-[260px] sm:h-[200px] h-[300px] rounded-lg shadow-lg ${fadeOutImages.includes(imageSrc) ? 'fade-out' : 'fade-in'}`}
+              className="w-full object-cover xl:h-[260px] sm:h-[200px] h-[300px] rounded-lg shadow-lg"
             />
             <button
               onClick={() => openModal(index)}
