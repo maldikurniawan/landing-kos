@@ -60,7 +60,7 @@ const Header = () => {
                             href="https://wa.me/6281369304112"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 hover:font-bold whitespace-nowrap text-xs sm:text-sm"
+                            className="flex items-center gap-2 hover:underline whitespace-nowrap text-xs sm:text-sm"
                         >
                             <span>Hubungi Kami</span>
                             <FaWhatsapp />

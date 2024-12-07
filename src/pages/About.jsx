@@ -46,7 +46,7 @@ const About = () => {
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <div className="relative w-full pb-[56.25%]"> {/* This sets a 16:9 aspect ratio */}
           <iframe
-            src="https://drive.google.com/file/d/1xDa5ykySU7ttkn4y4DIQ6OLVz69FIqiC/preview"
+            src="assets/kosan.mp4"
             className="absolute top-0 left-0 w-full h-full"
             allow="autoplay"
           ></iframe>
