@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Background Image Section */}
       <div className="relative">
         <img
-          src="assets/halaman2.jpg"
+          src="assets/rumahdepan.jpg"
           alt="Hero"
           className="w-full h-[300px] md:h-[500px] object-cover"
         />
