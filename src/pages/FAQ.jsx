@@ -7,6 +7,7 @@ const FAQ = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
+      once: true
     });
   }, []);
 
@@ -71,7 +72,7 @@ const FAQ = () => {
               <div
                 key={index}
                 className="bg-gray-100 rounded-lg p-4 cursor-pointer"
-                data-aos="fade-up" // AOS animation type
+                data-aos="flip-up" // AOS animation type
                 data-aos-delay={index * 100} // Stagger animation for each item
               >
                 {/* Title */}

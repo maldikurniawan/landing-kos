@@ -29,6 +29,7 @@ const Expectation = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      once: true
     });
   }, []);
 
@@ -42,7 +43,7 @@ const Expectation = () => {
           <div
             key={itemIdx}
             className="group bg-white hover:bg-green-600 rounded-lg w-[300px] sm:w-[350px] md:w-full overflow-hidden shadow-md transition-colors duration-300"
-            data-aos="fade-up" // AOS animation type
+            data-aos="zoom-in" // AOS animation type
             data-aos-delay={itemIdx * 100} // Stagger animation for each item
           >
             <img src={item.image} alt={item.title} className='w-full h-48 object-cover' />

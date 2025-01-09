@@ -44,6 +44,7 @@ const Service = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      once: true,
     });
   }, []);
 
@@ -57,7 +58,7 @@ const Service = () => {
           <div
             key={itemIdx}
             className="group bg-white rounded-lg w-[300px] lg:w-[280px] xl:w-[350px] p-4 mb-10 flex flex-col items-center text-center shadow-md"
-            data-aos="fade-up"
+            data-aos="flip-left"
             data-aos-delay={itemIdx * 100}
           >
             <div className='text-4xl text-white group-hover:text-green-600 group-hover:bg-white outline mb-4 bg-green-600 p-4 rounded-full absolute -mt-12'>

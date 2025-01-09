@@ -46,7 +46,7 @@ const Footer = () => {
                                     to={item.link}
                                     smooth={true}
                                     duration={500}
-                                    className="text-sm hover:text-green-500"
+                                    className="text-sm hover:text-green-500 cursor-pointer"
                                 >
                                     {item.title}
                                 </ScrollLink>

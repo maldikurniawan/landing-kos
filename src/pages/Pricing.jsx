@@ -31,6 +31,7 @@ const Pricing = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      once: true
     });
   }, []);
 
@@ -45,8 +46,8 @@ const Pricing = () => {
           <div
             key={index}
             className="rounded-lg bg-white hover:scale-105 hover:shadow shadow-md transition-all duration-300"
-            data-aos="fade-up" // AOS animation type
-            data-aos-delay={index * 100} // Stagger animation for each item
+            data-aos="flip-up" // AOS animation type
+            data-aos-delay={index * 100}
           >
             <div className="text-lg font-semibold mb-2 bg-green-600 text-white rounded-t-lg p-4 text-center">{item.title}</div>
             <div className='text-green-600 font-bold px-4 my-6 text-xl sm:text-2xl'>{`Rp ${item.price}`}</div>

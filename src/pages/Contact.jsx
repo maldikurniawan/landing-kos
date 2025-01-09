@@ -24,7 +24,10 @@ const Contact = () => {
   ]);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS with a default duration of 1000ms
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   }, []);
 
   return (
@@ -36,6 +39,7 @@ const Contact = () => {
       <div
         className='relative z-10 font-bold text-2xl sm:text-3xl lg:text-4xl mb-8 text-green-600 text-center'
         data-aos="fade-up"
+        data-aos-delay="200"
       >
         Kontak Kami
       </div>
@@ -43,7 +47,8 @@ const Contact = () => {
       {/* Map Section */}
       <div
         className="relative overflow-hidden h-[300px] sm:h-[400px] lg:h-[500px] rounded-lg mb-12"
-        data-aos="fade-up"
+        data-aos="zoom-in"
+        data-aos-delay="100"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.8856720248264!2d105.31449099999999!3d-5.3489580000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3005a872cfb%3A0x789fb35923f0f286!2sRumah%20Kost%20Klaten%20Asri!5e1!3m2!1sid!2sid!4v1731480189546!5m2!1sid!2sid"
@@ -59,7 +64,8 @@ const Contact = () => {
       {/* Contact Information */}
       <div
         className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10'
-        data-aos="fade-up"
+        data-aos="zoom-in"
+        data-aos-delay="100"
       >
         {contact.map((item, itemIdx) => (
           <div

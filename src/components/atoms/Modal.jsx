@@ -39,7 +39,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
       <button
         onClick={handleClose}
-        className="absolute top-4 right-4 bg-black text-white p-2 rounded-full hover:border z-50"
+        className="absolute top-4 right-4 bg-black text-white p-2 rounded-full hover:bg-white hover:text-black z-50"
       >
         <FaTimes className="w-6 h-6" />
       </button>
