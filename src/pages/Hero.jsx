@@ -13,21 +13,21 @@ const Hero = () => {
       description: "Membuat suasana hati lebih tenang dan nyaman.",
       icon: <LiaBroomSolid />,
       animation: 'fade-up',
-      delay: 1100,
+      delay: 2200,
     },
     {
       title: "Fasilitas",
       description: "Dengan fasilitas yang lengkap dapat membantu semua aktivitas kamu di kos-kosan.",
       icon: <BsHouseCheck />,
       animation: 'fade-up',
-      delay: 1200,
+      delay: 2400,
     },
     {
       title: "Dekat kemana saja",
       description: "Dengan lokasi yang strategis yang bisa menjangkau tujuan anda.",
       icon: <GrMapLocation />,
       animation: 'fade-up',
-      delay: 1300,
+      delay: 2600,
     },
   ]);
 
@@ -49,16 +49,16 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-[80px] text-white">
-          <div className="font-bold text-xl sm:text-4xl" data-aos="fade-right" data-aos-delay="400">
+          <div className="font-bold text-xl sm:text-4xl" data-aos="fade-right" data-aos-delay="100">
             Welcome to Rumah Klaten Asri
           </div>
-          <div className="text-md sm:text-xl mt-2" data-aos="fade-right" data-aos-delay="600">
+          <div className="text-md sm:text-xl mt-2" data-aos="fade-right" data-aos-delay="1000">
             Kos Putri Berdesain Rumah Kembar
           </div>
           <div
             className="mt-6 inline-block bg-green-100 hover:bg-green-600 hover:text-green-100 font-bold text-green-600 p-2 rounded-lg"
             data-aos="fade-right"
-            data-aos-delay="800"
+            data-aos-delay="1500"
           >
             <a href="https://wa.me/6281369304112" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center gap-2 cursor-pointer">
@@ -79,7 +79,7 @@ const Hero = () => {
           <div
             className="bg-green-600 text-white p-6 rounded-lg lg:w-1/3"
             data-aos="fade-up"
-            data-aos-delay="1000"
+            data-aos-delay="2000"
           >
             <h2 className="font-bold text-xl sm:text-2xl">Mengapa Memilih Rumah Klaten Asri?</h2>
             <p className="mt-4 text-sm sm:text-base text-justify">

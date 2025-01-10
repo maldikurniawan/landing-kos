@@ -38,8 +38,6 @@ const Contact = () => {
       {/* Section Title */}
       <div
         className='relative z-10 font-bold text-2xl sm:text-3xl lg:text-4xl mb-8 text-green-600 text-center'
-        data-aos="fade-up"
-        data-aos-delay="200"
       >
         Kontak Kami
       </div>
