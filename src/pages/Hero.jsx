@@ -13,21 +13,21 @@ const Hero = () => {
       description: "Membuat suasana hati lebih tenang dan nyaman.",
       icon: <LiaBroomSolid />,
       animation: 'fade-up',
-      delay: 2200,
+      delay: 2100,
     },
     {
       title: "Fasilitas",
       description: "Dengan fasilitas yang lengkap dapat membantu semua aktivitas kamu di kos-kosan.",
       icon: <BsHouseCheck />,
       animation: 'fade-up',
-      delay: 2400,
+      delay: 2200,
     },
     {
       title: "Dekat kemana saja",
       description: "Dengan lokasi yang strategis yang bisa menjangkau tujuan anda.",
       icon: <GrMapLocation />,
       animation: 'fade-up',
-      delay: 2600,
+      delay: 2300,
     },
   ]);
 
