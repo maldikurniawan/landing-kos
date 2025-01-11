@@ -13,21 +13,21 @@ const Hero = () => {
       description: "Membuat suasana hati lebih tenang dan nyaman.",
       icon: <LiaBroomSolid />,
       animation: 'fade-up',
-      delay: 2100,
+      delay: 200,
     },
     {
       title: "Fasilitas",
       description: "Dengan fasilitas yang lengkap dapat membantu semua aktivitas kamu di kos-kosan.",
       icon: <BsHouseCheck />,
       animation: 'fade-up',
-      delay: 2200,
+      delay: 200,
     },
     {
       title: "Dekat kemana saja",
       description: "Dengan lokasi yang strategis yang bisa menjangkau tujuan anda.",
       icon: <GrMapLocation />,
       animation: 'fade-up',
-      delay: 2300,
+      delay: 200,
     },
   ]);
 
@@ -79,7 +79,7 @@ const Hero = () => {
           <div
             className="bg-green-600 text-white p-6 rounded-lg lg:w-1/3"
             data-aos="fade-up"
-            data-aos-delay="2000"
+            data-aos-delay="200"
           >
             <h2 className="font-bold text-xl sm:text-2xl">Mengapa Memilih Rumah Klaten Asri?</h2>
             <p className="mt-4 text-sm sm:text-base text-justify">
