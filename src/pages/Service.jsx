@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
 import { BsFuelPump, BsMoonStars } from 'react-icons/bs';
 import { CiMedicalCase } from 'react-icons/ci';
 import { GiWaterPolo } from 'react-icons/gi';
@@ -40,13 +38,6 @@ const Service = () => {
       icon: <LuBaggageClaim />,
     },
   ]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
 
   return (
     <div id='Service' className='h-fit bg-gray-100 px-2 md:px-20 py-16'>

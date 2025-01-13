@@ -1,16 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaRegQuestionCircle } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const FAQ = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  }, []);
-
   const faq = [
     {
       rule: "Penghuni wajib memberikan informasi identitas diri saat mendaftar sebagai bentuk persyaratan dan untuk tujuan keamanan."

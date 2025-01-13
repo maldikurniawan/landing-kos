@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BsTelephone } from 'react-icons/bs';
 import { IoLocationOutline, IoMailOutline } from 'react-icons/io5';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const Contact = () => {
   const [contact] = useState([
@@ -22,13 +20,6 @@ const Contact = () => {
       icon: <BsTelephone />,
     },
   ]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }, []);
 
   return (
     <div

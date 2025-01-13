@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
 
 const Expectation = () => {
   const [expectation] = useState([
@@ -25,13 +23,6 @@ const Expectation = () => {
       image: "assets/halaman4.jpg",
     },
   ]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }, []);
 
   return (
     <div id='Expectation' className='h-fit bg-white px-4 md:px-20 py-16'>

@@ -11,11 +11,18 @@ import {
 } from "@/pages";
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setShowScrollToTop(true);

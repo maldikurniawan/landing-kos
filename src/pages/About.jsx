@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button, Modal } from '@/components';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const About = () => {
   const [aboutUs] = useState({
@@ -13,13 +11,6 @@ const About = () => {
 
   const [isModalOpen, setModalOpen] = useState(false);
   const closeModal = () => setModalOpen(!isModalOpen);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }, []);
 
   return (
     <div id="About" className="h-fit bg-white grid grid-cols-1 md:grid-cols-12 px-6 py-16 md:px-[80px] md:py-[5rem] gap-6">

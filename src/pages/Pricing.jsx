@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
 
 const Pricing = () => {
   const [contentReadMore] = useState([
@@ -27,13 +25,6 @@ const Pricing = () => {
       ],
     },
   ]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }, []);
 
   return (
     <div id='Pricing' className='h-fit bg-white px-4 md:px-[80px] py-16 md:py-[5rem]'>
